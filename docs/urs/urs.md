@@ -50,9 +50,9 @@ This document is provided to the students of the SE-80154 course as an example o
 | ------------------------------------- | ----------- | 
 | SE23                                  | Software Engineering course, 2023 at university of Genoa|
 | SE-80154                              | Software Engineering course, 2023 at university of Genoa, 80154 is its ID number|
-| MM                                    | [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine) |
-| DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29)|
-| GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM|
+| MM                                    | [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine) is formalism used to synthetize models of systems|
+| DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) Is a text language used to describe graphs.|
+| GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM in DOT format|
 
 
 
@@ -69,8 +69,6 @@ This document is provided to the students of the SE-80154 course as an example o
 
 ## 2. System Description
 <a name="sp2.15"></a>
-[Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. However  
-
 ### 2.1 Context and Motivation
 
 <a name="sp2.2"></a>
