@@ -13,7 +13,7 @@ Massimo Narizzano
 
 | Version    | Date        | Authors      | Notes        |
 | ----------- | ----------- | ----------- | ----------- |
-| 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project |
+| 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project. Completed section 1,2,3 |
 
 # Table of Contents
 
@@ -69,6 +69,9 @@ This document is provided to the students of the SE-80154 course as an example o
 
 ## 2. System Description
 <a name="sp2.15"></a>
+[Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. They can be described as a finite-state machine whose output values are determined both by its current state and the current inputs. In figure can be found a visual example of a Mealy machine.
+[Example of Mealy Machine](imgs/mm.jpg)
+
 ### 2.1 Context and Motivation
 
 <a name="sp2.2"></a>
