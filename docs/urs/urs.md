@@ -68,13 +68,22 @@ This document is provided to the students of the SE-80154 course as an example o
 
 
 ## 2. System Description
+
 <a name="sp2.15"></a>
-[Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. They can be described as a finite-state machine whose output values are determined both by its current state and the current inputs. In figure can be found a visual example of a Mealy machine.
-![Example of Mealy Machine](imgs/acc.jpg "Example of a mealy machine")
+
+In this document we describe the functionalities of a system that translate a mealy machine, essentially a graph, from a format to another. At the moment two are the format known, dot format and kiss format. So the idea is to develop a software that can read a format in input and translate the MM in the other format. 
 
 ### 2.1 Context and Motivation
 
 <a name="sp2.2"></a>
+[Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. They can be described as a finite-state machine whose output values are determined both by its current state and the current inputs. In figure can be found a visual example of a Mealy machine.
+
+![Example of Mealy Machine](imgs/acc.jpg "Example of a mealy machine")
+
+Mealy Machines can be used to describe logic circuits and also to model embedded systems. They are easy to understand and easy to use, for these reasons they are used in many field from design to verification. In particular they are used in th field of system synthesis, as output to describe the synthetized circuit, or system verification, representing the system that have to be verified. 
+
+
+
 
 ### 2.2 Project Obectives 
 
