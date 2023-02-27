@@ -1,19 +1,19 @@
 
 ### User Requirements Specification Document
+### Mealy Machine Translator
 ##### DIBRIS – Università di Genova. Scuola Politecnica, Software Engineering Course 80154
 
 
-**VERSION : X.X**
+**VERSION : 1.0**
 
 **Authors**  
-XXXX
-YYYY
+Massimo Narizzano
 
 **REVISION HISTORY**
 
 | Version    | Date        | Authors      | Notes        |
 | ----------- | ----------- | ----------- | ----------- |
-| X.X |  | |  |
+| 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project |
 
 # Table of Contents
 
@@ -36,18 +36,25 @@ YYYY
 ## 1. Introduction
 
 <a name="sp1.1"></a>
+This document is a simple example of a User Requirements Documents that is used as running example in the Software Engineering class at University of Genoa, course number 80154. It describes the functionality of a simple software that translate a Mealy machine from a format to another format.
 
 ### 1.1 Document Scope
 
-
 <a name="sp1.2"></a>
+This document is provided to the students of the SE-80154 course as an example of User Requirements documents. It shows how requirements can be written and which are the main errors in writing specifications. It may contains errors that are presents for didactical reasons. 
 
 ### 1.2 Definitios and Acronym
 
 
 | Acronym				| Definition | 
 | ------------------------------------- | ----------- | 
-| XXXX                                  | XXXX |
+| SE23                                  | Software Engineering course, 2023 at university of Genoa|
+| SE-80154                              | Software Engineering course, 2023 at university of Genoa, 80154 is its ID number|
+| MM                                    | [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine) |
+| DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29)|
+| GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM|
+
+
 
 <a name="sp1.3"></a>
 
@@ -55,8 +62,14 @@ YYYY
 
 <a name="p2"></a>
 
+1. [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine)
+2. [DOT](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29)
+3. [Graphviz](https://www.graphviz.org/) 
+
+
 ## 2. System Description
 <a name="sp2.15"></a>
+[Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. However  
 
 ### 2.1 Context and Motivation
 
