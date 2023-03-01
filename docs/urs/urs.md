@@ -13,7 +13,9 @@ Massimo Narizzano
 
 | Version    | Date        | Authors      | Notes        |
 | ----------- | ----------- | ----------- | ----------- |
-| 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project. Completed section 1,2,3 |
+| 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project. Completed section 1|
+| 1.1 | 01/03/2023 | Massimo Narizzano| Completed section 2|
+
 
 # Table of Contents
 
