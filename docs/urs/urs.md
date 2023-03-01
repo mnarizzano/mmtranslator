@@ -86,11 +86,11 @@ Mealy Machines can be used to describe logic circuits and also to model embedded
 Mealy Machines are usually used in automatic tools that read the mealy machine and execute some algorithm on them. Usually they are describe in a text file using a syntax. Unluckly each tools use is own syntax, for example synthesis tools are using a format called Kiss, other are using dot. This implies that even if we have many benchamrks of mealy machine thay can not be used since have different format, or you have to translate them into a different format manually, trashing a lot of time.
 
 
-### 2.2 Project Obectives 
+### 2.2 Project Objectives 
 
 <a name="p3"></a>
 
-The project objective is create a translator that given a MM machine in a format allows the user choose a new format and then to automatically translate the mm into another format.  
+The project objective is create a translator that given a MM machine in a format allows the user choose a new format and then to automatically translate the mm into another format.  In particular we want a GUI application and eventually a command line tool that allow the user to translate the input file into another format.
 
 ## 3. Requirements
 
@@ -102,9 +102,12 @@ The project objective is create a translator that given a MM machine in a format
 | E | **future Enhancement:** |
 
 <a name="sp3.1"></a>
+
 ### 3.1 Stakeholders
 
 <a name="sp3.2"></a>
+
+
 ### 3.2 Functional Requirements 
 
 | ID | Descrizione | Priorità |
