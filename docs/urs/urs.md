@@ -73,7 +73,7 @@ This document is provided to the students of the SE-80154 course as an example o
 
 In this document we describe the functionalities of a system that translate a mealy machine, essentially a graph, from a format to another. At the moment two are the format known, dot format and kiss format. So the idea is to develop a software that can read a format in input and translate the MM in the other format. 
 
-### 2.1 Context and Motivation
+### 2.1 Context
 
 <a name="sp2.2"></a>
 [Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. They can be described as a finite-state machine whose output values are determined both by its current state and the current inputs. In figure can be found a visual example of a Mealy machine.
@@ -82,12 +82,15 @@ In this document we describe the functionalities of a system that translate a me
 
 Mealy Machines can be used to describe logic circuits and also to model embedded systems. They are easy to understand and easy to use, for these reasons they are used in many field from design to verification. In particular they are used in th field of system synthesis, as output to describe the synthetized circuit, or system verification, representing the system that have to be verified. 
 
-
+### 2.2 Motivations (what is the problem?)
+Mealy Machines are usually used in automatic tools that read the mealy machine and execute some algorithm on them. Usually they are describe in a text file using a syntax. Unluckly each tools use is own syntax, for example synthesis tools are using a format called Kiss, other are using dot. This implies that even if we have many benchamrks of mealy machine thay can not be used since have different format, or you have to translate them into a different format manually, trashing a lot of time.
 
 
 ### 2.2 Project Obectives 
 
 <a name="p3"></a>
+
+The project objective is create a translator that given a MM machine in a format allows the user choose a new format and then to automatically translate the mm into another format.  
 
 ## 3. Requirements
 
