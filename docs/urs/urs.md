@@ -55,7 +55,7 @@ This document is provided to the students of the SE-80154 course as an example o
 | MM                                    | [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine) is formalism used to synthetize models of systems|
 | DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) Is a text language used to describe graphs.|
 | GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM in DOT format|
-
+| KISS                                  |[Kiss2 format](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss) |
 
 
 <a name="sp1.3"></a>
@@ -78,23 +78,22 @@ In this document we describe the functionalities of a system that translate a me
 ### 2.1 Context
 
 <a name="sp2.2"></a>
+Mealy machines are Deterministic Finite State Automata that have also output at any tick of the clock. Modern CPUs, computers, cell phones, digital clocks and basic electronic devices/machines have some kind of finite state machine to control it. Simple software systems, particularly ones that can be represented using regular expressions, can be modeled as finite state machines. There are many such simple systems, such as vending machines or basic electronics.
 [Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. They can be described as a finite-state machine whose output values are determined both by its current state and the current inputs. In figure can be found a visual example of a Mealy machine.
 
 ![Example of Mealy Machine](imgs/acc.jpg "Example of a mealy machine")
 
 It represents a system with two states (0,1) and three variables : act, deact are input boolean signals while flag is an output boolean signal. Each arrow on the graph represents the relations between input and output signals. So for example on state 0 the self arrow has the label (!act & !deact / !flag) meaning that if the system is on state 0 and both the imput signals (act,deact) are false then the output signal must be set to false.
 
-Mealy Machines can be used to describe logic circuits and also to model embedded systems. They are easy to understand and easy to use, for these reasons they are used in many field from design to verification. In particular they are used in th field of system synthesis, as output to describe the synthetized circuit, or system verification, representing the system that have to be verified. 
-
 ### 2.2 Motivations (what is the problem?)
-Mealy Machines are usually used in automatic tools that read the mealy machine and execute some algorithm on them. Usually they are describe in a text file using a syntax. Unluckly each tools use is own syntax, for example synthesis tools are using a format called Kiss, other are using dot. This implies that even if we have many benchamrks of mealy machine thay can not be used since have different format, or you have to translate them into a different format manually, trashing a lot of time.
+Given its semplicity, Mealy Machine is a powerfull formalism to describe systems. In the last 20 years we testify the growing use of MM expecially in the field of circuit synthesis and Verification. As a consequence many benchmarks and tools reading MM have been constructed. Unluckly, since a MM is a graph, many different syntax have been used to describe such systems, such as for example [Kiss2 format](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss), or [dot](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format. In other word if any reasercher want to develop a tools that take in input/get in output a MM he must write different parser/writer in order to cope with all these formats. All these different MM formats can discourage the use of such a formalism.
 
 
 ### 2.2 Project Objectives 
 
 <a name="p3"></a>
 
-The project objective is create a translator that given a MM machine in a format allows the user choose a new format and then to automatically translate the mm into another format.  In particular we want a GUI application and eventually a command line tool that allow the user to translate the input file into another format.
+The project objective is to create a translator that given a MM machine in a format (for example dot) allows the user to choose a new format (for example KISS) and then to automatically translate it in this format.  In particular we want a GUI application and eventually a command line tool that allow the user to translate the input file into another format. It should be possible somehow to deal with the possibility of adding new formats on the fly by providing just a parser and a writer.
 
 ## 3. Requirements
 
