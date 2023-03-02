@@ -82,6 +82,8 @@ In this document we describe the functionalities of a system that translate a me
 
 ![Example of Mealy Machine](imgs/acc.jpg "Example of a mealy machine")
 
+It represents a system with two states (0,1) and three variables : act, deact are input boolean signals while flag is an output boolean signal. Each arrow on the graph represents the relations between input and output signals. So for example on state 0 the self arrow has the label (!act & !deact / !flag) meaning that if the system is on state 0 and both the imput signals (act,deact) are false then the output signal must be set to false.
+
 Mealy Machines can be used to describe logic circuits and also to model embedded systems. They are easy to understand and easy to use, for these reasons they are used in many field from design to verification. In particular they are used in th field of system synthesis, as output to describe the synthetized circuit, or system verification, representing the system that have to be verified. 
 
 ### 2.2 Motivations (what is the problem?)
