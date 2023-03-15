@@ -115,7 +115,9 @@ The project objective is to create a translator that given a MM machine in a for
 
 | ID | Descrizione | Priorità |
 | --------------- | ----------- | ---------- | 
-| 1.0 |  XXXXX |M|
+| 1.0 |  The System should be able to load a MM in dot format|M|
+| 1.0 |  The System should be able to load a MM in kiss format|D|
+
 
 <a name="sp3.3"></a>
 ### 3.2 Non-Functional Requirements 
