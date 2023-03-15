@@ -117,6 +117,29 @@ The project objective is to create a translator that given a MM machine in a for
 | --------------- | ----------- | ---------- | 
 | 1.0 |  The System should be able to load a MM in dot format|M|
 | 1.0 |  The System should be able to load a MM in kiss format|D|
+| 1.0 |  The System should be able to display a loaded MM text format |M|
+| 1.0 |  The System should be able to display a loaded MM in a graphic way, such as a directed connected graph |M|
+| 1.0 |  The System could load a list of comma separated symbols representing input system variables|D|
+| 1.0 |  If the system takes in input a set of comma separated symbols as input system variables, they should also appear in the kiss output format, according to that format |D|
+| 1.0 |  The System could load a list of comma separated symbols representing output system variables|D|
+| 1.0 |  If the system takes in input a set of comma separated symbols as input system variables, they should also appear in the kiss input format, according to that format |D|
+| 1.0 |  The System should be able to save a mealy machine in kiss format according to |M|
+| 1.0 |  If the system takes in input a set of comma separated symbols as output system variables, they should also appear in the kiss output format, according to that format |D|
+| 1.0 |  The System should allow the user to modify the diplayed text|M|
+| 1.0 |  The System should convert a loaded MM in dot format in a MM in KISS format|M|
+| 1.0 |  The System should save a displayed text MM into the proper format |M|
+| 1.0 |  The System should be accessible by command line tool for batch work|M|
+| 1.0 |  The System should have also a GUI to interact with |M|
+
+
+
+
+
+
+
+
+
+
 
 
 <a name="sp3.3"></a>
