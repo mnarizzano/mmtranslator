@@ -1,3 +1,2 @@
-**TODO : Please modify this file according to the following**
-
-Fill the document with the authors and the contact references
+Massimo Narizzano (massimo.narizzano@unige.it)
+Claudio Giampaolo (kla1997@live.com)
