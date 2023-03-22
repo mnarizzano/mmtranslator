@@ -110,7 +110,7 @@ The project objective is to provide a tools that allows MNcomp employees to crea
 
 ## 3. Requirements
 
-| Priorità | Significato | 
+| Priority | Description | 
 | --------------- | ----------- | 
 | M | **Mandatory:**   |
 | D | **Desiderable:** |
@@ -126,7 +126,7 @@ The project objective is to provide a tools that allows MNcomp employees to crea
 
 ### 3.2 Functional Requirements 
 
-| ID | Descrizione | Priorità |
+| ID | Description | Priority |
 | --------------- | ----------- | ---------- | 
 | 1.0 |  The System should Allow the design of a MM | |
 | 2.0 |  The System should be able to load a MM in dot/kiss2 format| |
@@ -135,6 +135,6 @@ The project objective is to provide a tools that allows MNcomp employees to crea
 <a name="sp3.3"></a>
 ### 3.2 Non-Functional Requirements 
  
-| ID | Descrizione | Priorità |
+| ID | Description | Priority |
 | --------------- | ----------- | ---------- | 
 | 1.0 | XXXXX |M|
