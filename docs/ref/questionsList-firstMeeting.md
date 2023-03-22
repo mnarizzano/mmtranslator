@@ -1,5 +1,7 @@
 ### Question list
 
+In this document we are going to write some questions that can be used in the first meeting with the company.
+
 1) What is the Kiss2 format?
 3) MM has requirements for the Design?
 4) Which Tools are necessary for the Deisgn?
