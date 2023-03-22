@@ -1,6 +1,5 @@
 # MMTranslator (Mealy Machine Translator)
 ### MNcomp
 #### Description of the project
-This document is a simple example of a User Requirements Documents that is used as running example in the Software Engineering class at University of Genoa, course number 80154. 
-
-In this project we want to develop a system that takes in input a [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine) in a given format and translate it into a different formats. The formats availables at the moment are [dot](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29),[kiss](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss).
+This Project is a simple(and creative) example of how the entire process of Software Engineering can be applied to a simple software development. It is used as running example in the Software Engineering class at University of Genoa, course number 80154. It shows how the User requirements Document should be written and also the Design requirements documents. It also present an implementation solution and the testing plan.
+The details about the project can be found in the [urs docs](urs/urs.md)
