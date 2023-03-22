@@ -1,4 +1,7 @@
-**TODO : Please modify this file according to the following**
+#### Dir Contents
 
-In this directory are references for the document compilation. For example a list of questions and answers can be stored in this directory.
-In this file for each resource a small description must be provided.
+- mm.pdf: Is a file containing a brief description of what is a Mealy Machine (copied by wikipedia) and an example of Mealy Machine with some requirements written in Linear Temporal Logic, and the MM described in dot and kiss2 format. 
+
+- questionList-FirstMeeting.md: are a list of question that have been used to drive the first meeting conversation
+
+- First Meeting Notes : notes about the first meeting with the client.
