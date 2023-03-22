@@ -106,7 +106,7 @@ Unlucly the two tools export the same MM into a text file but with different for
 
 <a name="p3"></a>
 
-The project objective is to provide a tools that allows MNcomp employees to create MM using the old tool that can also be loaded by new chips.
+The project objective is to provide a tool that allows MNcomp employees to create MM using the old tool that can also be loaded by new chips.
 
 ## 3. Requirements
 
