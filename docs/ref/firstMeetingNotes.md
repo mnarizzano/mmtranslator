@@ -2,7 +2,7 @@
 
 Date: 21/03/2023
 
-Participants: Head of MNcomp(Head), an OldChip MM designer(OldDesigner), a NewChip MM designer(NewDesigner),a chip loader(Loader)
+Participants: Head of MNcomp(**Head**), an OldChip MM designer(**OldDesigner**), a NewChip MM designer(**NewDesigner**),a chip loader(**Loader**)
 
 Notes:
 
@@ -26,7 +26,6 @@ Notes:
 
 **Can the Designer tools provided by the two company be modified by adding external plugins?** **New Designer** : Both the designer tools are propetary software, so only executables are provided to us. **Did you ever ask for a plugin to the company** **Head** - Yes in the past we sent some improvements that could have been done to the OldChip Company, and some of them were present in the new version. However it tooks some years to have them and not all. Before deciding to get the new chips we asked to the NewChip Company if they ever planned to provide a way to save/load dot MM. They answer that they never plan and that they are now in the process of considereing. But since a couple of month we did not have any precise answer.
 
-
-
-Who are the people involved in the Design process?
+**Who are the people involved in the Design process?** **Head** Many people with different task and skill are involved in the process. We start with Feature Designer, that are people that design new machines or plan to updates the old one. They essentially write the "requirements" for the MM machines that must be designed.
+Then the Requirements are given to the MM designers that design the MM using the Old/NewChip Designer Tool. At the end they produce a dot/kiss2 file describing a MM. Then this file is given to the Validation&Verification Group that check if the MM respect all the requirements and that it does not have any bug. If the MM does not respect the requirements it is sent back to the Designer in order to be modified. If at some points it respect the requirements, then the chip Loader will load the MM file into the chip. Once the chip is completed, it is used as a prototype and sent to the Tester that test the chip into a virtual enviroment. If there is any error the bug report is sent back to the designer and the procerss restart. Otherwise if everything is ok, the MM is then sent to the production. 
 
