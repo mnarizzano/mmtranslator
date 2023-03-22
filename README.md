@@ -1,5 +1,5 @@
 # MMTranslator (Mealy Machine Translator)
-### Unige
+### MNcomp
 #### Description of the project
 This document is a simple example of a User Requirements Documents that is used as running example in the Software Engineering class at University of Genoa, course number 80154. 
 
