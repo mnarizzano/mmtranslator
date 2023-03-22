@@ -15,6 +15,10 @@ Massimo Narizzano
 | ----------- | ----------- | ----------- | ----------- |
 | 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project. Completed section 1|
 | 1.1 | 01/03/2023 | Massimo Narizzano| Completed section 2|
+| 1.2 | 20/03/2023 | Massimo Narizzano| Added some requirements|
+| 1.3 | 22/03/2023 | Massimo Narizzano| Modified section 2 with new informations|
+
+
 
 
 # Table of Contents
@@ -56,7 +60,7 @@ This document is provided to the students of the SE-80154 course as an example o
 | DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) Is a text language used to describe graphs.|
 | GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM in DOT format|
 | KISS                                  |[Kiss2 format](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss) |
-| MNcomp                                |Massimo Narizzano Company, the client. |
+| MNcomp                                |Is the client. |
 | OldChip Company                       |Is the company that produces *old* generation chips|
 | NewChip Company                       |Is the company that produces  *new* generatio chips|
 | OldChip Designer                      |Is a tool used to design MM for the chips produced by OldChip company|
@@ -94,14 +98,15 @@ Mealy machines are Deterministic Finite State Automata that have also output at 
 It represents a system with two states (0,1) and three variables : act, deact are input boolean signals while flag is an output boolean signal. Each arrow on the graph represents the relations between input and output signals. So for example on state 0 the self arrow has the label (!act & !deact / !flag) meaning that if the system is on state 0 and both the imput signals (act,deact) are false then the output signal must be set to false.
 
 ### 2.2 Motivations (what is the problem?)
-Given its semplicity, Mealy Machine is a powerfull formalism to describe systems. In the last 20 years we testify the growing use of MM expecially in the field of circuit synthesis and Verification. As a consequence many benchmarks and tools reading MM have been constructed. Unluckly, since a MM is a graph, many different syntax have been used to describe such systems, such as for example [Kiss2 format](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss), or [dot](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format. In other word if any reasercher want to develop a tools that take in input/get in output a MM he must write different parser/writer in order to cope with all these formats. All these different MM formats can discourage the use of such a formalism.
+Nowadays there is a lot of competition between chips producers. So Another chip cames into play and look very promising for MNcomp. This new chip is produced by NewChip company. The chip produced by NewChip company has some important and usefull functionality, such that the MNcomp decide to use it in its new generation machines. The new chip can be also programmed by a MM, so it should not be so difficult to migrate from old chips to new ones, and the entire desing process looks equivalent to the process used for  old chips: NewChip company provide a tool called  newchip designer that allows a user to design a MM. The tool allows to export (save) the MM into a text file that can be loaded into the new chips. The two designer tools are very different in the  user interface, but they are equivalent, you can design equivalent MM usign both tools. However in order to use the new chips the employees of the MNcomp must learn the NewChip designer tool. Since the MM are equivalent, and the entire process is equivalent, the Head of the MNcomp wants that the company employees use the OldChip Design tools, so it can save some money.
 
+Unlucly the two tools export the same MM into a text file but with different formats: the OldChip Designer export a MM into a [dot](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format, while NewChip designer into a [Kiss2 format](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss). In other word it looks that a MM deigned with OldChip designer tool can not be directly loaded into the new Chips, it has to be re-designed with the NewChip designer tools.
 
 ### 2.2 Project Objectives 
 
 <a name="p3"></a>
 
-The project objective is to create a translator that given a MM machine in a format (for example dot) allows the user to choose a new format (for example KISS) and then to automatically translate it in this format.  In particular we want a GUI application and eventually a command line tool that allow the user to translate the input file into another format. It should be possible somehow to deal with the possibility of adding new formats on the fly by providing just a parser and a writer.
+The project objective is to provide a tools that allows MNcomp employees to create MM using the old tool that can also be loaded by new chips.
 
 ## 3. Requirements
 
