@@ -56,6 +56,12 @@ This document is provided to the students of the SE-80154 course as an example o
 | DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) Is a text language used to describe graphs.|
 | GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM in DOT format|
 | KISS                                  |[Kiss2 format](https://automata.cs.ru.nl/BenchmarkCircuits/Kiss) |
+| MNcomp                                |Massimo Narizzano Company, the client. |
+| OldChip Company                       |Is the company that produces *old* generation chips|
+| NewChip Company                       |Is the company that produces  *new* generatio chips|
+| OldChip Designer                      |Is a tool used to design MM for the chips produced by OldChip company|
+| NewChip Designer                      |Is a tool used to design MM for the chips produced by NewChip company|
+
 
 
 <a name="sp1.3"></a>
@@ -76,8 +82,10 @@ This document is provided to the students of the SE-80154 course as an example o
 In this document we describe the functionalities of a system that translate a mealy machine, essentially a graph, from a format to another. At the moment two are the format known, dot format and kiss format. So the idea is to develop a software that can read a format in input and translate the MM in the other format. 
 
 ### 2.1 Context
-
 <a name="sp2.2"></a>
+
+MNcomp is an enterprise that programs chips for machines used in our daylife, i.e. Washing or Dishwasher machines. MNcomp does not produce the chip by itself, rather it buy programmable chips from another company called OldChip Company. In order to program these chips the MNcomp employees use a tool called OldChip Designer that allows a user to draw a Mealy Machine (MM) that is used to control the chip's behaviour. OldChip designer is a tool that has been developed by OldChip company and provided as it is to the MNcomp. Once the MM is designed can be saved into a text file having a proper format called dot format. This MM in dot format is then loaded into the chip that is then ready to be used.
+
 Mealy machines are Deterministic Finite State Automata that have also output at any tick of the clock. Modern CPUs, computers, cell phones, digital clocks and basic electronic devices/machines have some kind of finite state machine to control it. Simple software systems, particularly ones that can be represented using regular expressions, can be modeled as finite state machines. There are many such simple systems, such as vending machines or basic electronics.
 [Mealy Machines](https://en.wikipedia.org/wiki/Mealy_machine) are a type of automata that are uesd to model some kind of Embedded Systems. They can be described as a finite-state machine whose output values are determined both by its current state and the current inputs. In figure can be found a visual example of a Mealy machine.
 
