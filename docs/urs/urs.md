@@ -131,6 +131,20 @@ The project objective is to provide a tool that allows MNcomp employees to creat
 | 1.0 |  The System should Allow the design of a MM | |
 | 2.0 |  The System should be able to load a MM in dot/kiss2 format| |
 | 3.0 |  The System should be able to save a MM in dot/kiss2 format| |
+| 4.0 |  The System should have a Design similar to the OldChip Design Tool| |
+| 5.0 |  The System should have an authentication policy in order to be used remotely| |
+| 6.0 |  The System should have a remote repository| |
+| 7.0 |  The System should have the possibility to be runned by command line| |
+| 8.0 |  The System should have the possibility to modify a MM loaded| |
+| 9.0 |  The System should be able to minimize a MM| |
+| 10.0 |  The System should have the possibility to be runned by command line| |
+| 11.0 |  The System should show the text (dot) format of the MM| |
+| 12.0 |  The System should allow the user to hide the view he does not want to show.| |
+
+
+
+
+
 
 <a name="sp3.3"></a>
 ### 3.2 Non-Functional Requirements 
