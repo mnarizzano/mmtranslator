@@ -4,7 +4,7 @@
 ##### DIBRIS – Università di Genova. Scuola Politecnica, Software Engineering Course 80154
 
 
-**VERSION : 1.0**
+**VERSION : 1.3**
 
 **Authors**  
 Massimo Narizzano
@@ -110,7 +110,7 @@ The project objective is to provide a tools that allows MNcomp employees to crea
 
 ## 3. Requirements
 
-| Priority | Description | 
+| Priority | Definition | 
 | --------------- | ----------- | 
 | M | **Mandatory:**   |
 | D | **Desiderable:** |
