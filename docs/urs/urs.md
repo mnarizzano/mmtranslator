@@ -106,7 +106,7 @@ Unlucly the two tools export the same MM into a text file but with different for
 
 <a name="p3"></a>
 
-The project objective is to provide a tool that allows MNcomp employees to create MM using the old tool that can also be loaded by new chips.
+The project objective is to provide a tool that allows MNcomp employees to create MM using the old tool that can also be loaded by new chips. The idea is to have a tool that can read a dot file and traslate it into a kiss2 file, and viceversa. However the Kiss2 file format mantains information about variables,i.e. if a signal is an input or an output variable. 
 
 ## 3. Requirements
 
@@ -128,18 +128,16 @@ The project objective is to provide a tool that allows MNcomp employees to creat
 
 | ID | Description | Priority |
 | --------------- | ----------- | ---------- | 
-| 1.0 |  The System should Allow the design of a MM | |
-| 2.0 |  The System should be able to load a MM in dot/kiss2 format| |
-| 3.0 |  The System should be able to save a MM in dot/kiss2 format| |
-| 4.0 |  The System should have a Design similar to the OldChip Design Tool| |
-| 5.0 |  The System should have an authentication policy in order to be used remotely| |
-| 6.0 |  The System should have a remote repository| |
-| 7.0 |  The System should have the possibility to be runned by command line| |
-| 8.0 |  The System should have the possibility to modify a MM loaded| |
-| 9.0 |  The System should be able to minimize a MM| |
-| 10.0 |  The System should have the possibility to be runned by command line| |
-| 11.0 |  The System should show the text (dot) format of the MM| |
-| 12.0 |  The System should allow the user to hide the view he does not want to show.| |
+| 1.0 |  The system should take as input a valid path to a to a file where a MM is stored in dot format | |
+| 2.0 |  The system should take as input a list of signal names representing the input signal of the MM| |
+| 3.0 |  The system should take as input a list of signal names representing the output signal of the MM| |
+| 3.1 |  The input/output signals should have an unique name| |
+| 3.2 |  The input/output signals should occur in the input file | |
+| 4.0 |  The system should take as input a valid path to a to a file where the translation should be written | |
+| 5.0 |  The system should convert the MM in input from the dot format to a Kiss2 format | |
+| 6.0 |  The system should take as input a valid path to a to a file where a MM is stored in kiss2 format | |
+| 7.0 |  The system should convert the MM in input from the kiss2 format to a dot format | |
+| 7.1 |  If the MM is in the kiss2 format, the system should also provide in output the input/output signal list | |
 
 
 
@@ -151,4 +149,7 @@ The project objective is to provide a tool that allows MNcomp employees to creat
  
 | ID | Description | Priority |
 | --------------- | ----------- | ---------- | 
+| 1.0 |  The System should have the possibility to be runned by command line| |
+| 2.0 |  The System should be multiplatform| |
+
 | 1.0 | XXXXX |M|
