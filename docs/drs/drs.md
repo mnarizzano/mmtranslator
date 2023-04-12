@@ -9,9 +9,9 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 
 ### REVISION HISTORY
 
-Version | Data | Author(s)| Notes
----------|------|--------|------
-1 | 12/04/23 | Massimo Narizzano | First Versionn of the document
+| Version | Data | Author(s)| Notes |
+| ---------|------|--------|------  |
+| 1 | 12/04/23 | Massimo Narizzano | First Versionn of the document|
 
 ## Table of Content
 
@@ -107,16 +107,12 @@ specifications    </p>
     <summary> The system should ....
     </summary>
     <p> ....</p>
-</details>
-| 1.0  | Use Case |
-| ------------- | ------------- |
-| Name   | mm2kiss  |
-| Actors | User  |
-| Entry  | Path to a MM file in dot format <br> Inputs/Outputs Signals <br> Path to MM outfile |
-| Exit   | A MM in a KISS format |
-| Events Flow  | User invoke the system via command line <br> User provide a path to a MM in dot format
-                  <br> |
 
+| 1.0           | Use Case      |
+| ------------- | ------------- |
+| Name          | mm2kiss       |
+
+</details>
 
 
 ### <a name="architecture"></a>  3.1 System Architecture
