@@ -109,9 +109,8 @@ specifications    </p>
     <summary> The system should ....
     </summary>
     <p> ....</p>
+  
     
-![Use Case Diagram](imgs/use-case.png "Use Case Diagram")
-
 | Use Case      | 1.0           |
 | ------------- | ------------- |
 | Name          | mm2kiss       |
@@ -130,6 +129,8 @@ specifications    </p>
 | Exit  Point   | (i) File where  the translated MM must be stored. <br> (ii) List of Input Signals. <br> (iii) List of Output Signals |
 | Event Flow    | (1) User invoke the system by command line <br> (2) User provide a valid path to an input MM in kiss2 format <br> (3) User provide a valid path to an empty file where the system should store the output MM <br> (4) System validates the input MM <br> (5) System validates the output file <br> (6) System correctly parse the input file and store the MM in memory<br> (7) System write the MM into the output file <br> (8) System write the list of Input Signal into the standard input. <br> (9) System write the List of output signals into the standard input| 
 </details>
+
+![Use Case Diagram](imgs/use-case.jpg "Use Case Diagram")
 
 
 
