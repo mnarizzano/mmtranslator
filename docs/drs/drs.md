@@ -114,8 +114,7 @@ specifications    </p>
 | Actors        | Generic User  |    
 | Entry Point   | (i) MM dot file. <br> (ii) List of Input Signals <br> (iii) List of Output Signals   |
 | Exit  Point   | File describing the input MM in Kiss2 format |
-| Event Flow    | (1) User invoke the system by command line <br> (2) User provide a valid path to an input MM in dot format <br> (3) User provide a list of symbols representing the input signals <br> (4) User provide a list of symbols representing the output signals <br> (5) User provide a valid path to an empty file where the system should store the output MM <br> (6) System validate the input MM <br> (7) System validate the list of input signals<br> (8) System valdiates the list of output signals <br> (9) 
-  9  
+| Event Flow    | (1) User invoke the system by command line <br> (2) User provide a valid path to an input MM in dot format <br> (3) User provide a list of symbols representing the input signals <br> (4) User provide a list of symbols representing the output signals <br> (5) User provide a valid path to an empty file where the system should store the output MM <br> (6) System validates the input MM <br> (7) System validates the list of input signals<br> (8) System valdiates the list of output signals <br> (9) System validates the output file <br> (10) System correctly parse the input file and store the MM in memory<br> (11) System write the MM in memory into the output file | 
 </details>
 
 
