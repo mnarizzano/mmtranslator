@@ -12,6 +12,8 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 | Version | Data | Author(s)| Notes |
 | ---------|------|--------|------  |
 | 1 | 12/04/23 | Massimo Narizzano | First Versionn of the document|
+| 2 | 13/04/23 | Massimo Narizzano | Completed the second Use casem, added the Use case diagram|
+
 
 ## Table of Content
 
@@ -107,6 +109,7 @@ specifications    </p>
     <summary> The system should ....
     </summary>
     <p> ....</p>
+    
 ![Use Case Diagram](imgs/use-case.png "Use Case Diagram")
 
 | Use Case      | 1.0           |
