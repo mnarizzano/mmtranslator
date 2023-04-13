@@ -107,6 +107,7 @@ specifications    </p>
     <summary> The system should ....
     </summary>
     <p> ....</p>
+![Use Case Diagram](imgs/use-case.png "Use Case Diagram")
 
 | Use Case      | 1.0           |
 | ------------- | ------------- |
