@@ -108,10 +108,14 @@ specifications    </p>
     </summary>
     <p> ....</p>
 
-| 1.0           | Use Case      |
+| Use Case      | 1.0           |
 | ------------- | ------------- |
 | Name          | mm2kiss       |
-
+| Actors        | Generic User  |    
+| Entry Point   | (i) MM dot file. <br> (ii) List of Input Signals <br> (iii) List of Output Signals   |
+| Exit  Point   | File describing the input MM in Kiss2 format |
+| Event Flow    | (1) User in5oke the system by command line <br> (2) User provide a valid path to an input MM in dot format <br> (3) User provide a list of symbols representing the input signals <br> (4) User provide a list of symbols representing the output signals <br> (5)
+    
 </details>
 
 
