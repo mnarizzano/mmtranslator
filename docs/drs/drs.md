@@ -189,9 +189,8 @@ specifications    </p>
 <details> 
     <summary> This section describe the class diagram of the system.
     </summary>
-    <p>/p>
-
-![Use Case Diagram](imgs/use-case.jpg "Use Case Diagram")
+    
+![Class Diagram](imgs/class.jpg "Class Diagram")
 
 </details>
 
@@ -207,6 +206,9 @@ specifications    </p>
     <summary> Put a summary of the section
     </summary>
     <p>This sub section should describe ...</p>
+    
+![Object Diagram](imgs/object.jpg "Class Diagram")
+
 </details>
 
 #### <a name="dm"></a>  4.2 Dynamic Models
