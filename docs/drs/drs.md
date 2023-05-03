@@ -214,9 +214,11 @@ specifications    </p>
 
 </details>
 
-#### <a name="dm"></a>  4.2 Dynamic Models
+#### <a name="dm"></a>  4.2 MM2Kiss translation
 <details> 
-    <summary> Put a summary of the section
+    <summary> 
+    In this section we define the dynamic model for mm to kiss translation
     </summary>
     <p>This sub section should describe ...</p>
+![ACtivity Diagram](imgs/activity.jpg "Activity")
 </details>
