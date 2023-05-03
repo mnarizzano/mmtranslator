@@ -156,43 +156,43 @@ specifications    </p>
 
 #### <a name="inputs"></a>  3.3.1 System Inputs
 <details> 
-    <summary> Put a summary of the section
-    </summary>
-  <p> The inputs of the systems are : </p>
+    <summary> Here we describe the command line inputs of the sistem. </summary>
+  <p> The inputs of the system are : </p>
     <ul> 
-        <li> Absolute path to the input file  </li>
-        <li> Absolute path to the output file  </li>
-        <li> List of string names separated by comma</li>
-        <li> List of string names separated by comma</li>
+        <li> Absolute path to the input file: The file should not be empty and should describe a valid MM into a valid [dot](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) Format.</li>
+        <li> Absolute path to the output file: The file should be empty and it will contain the final result of the translation  </li>
+        <li> List of string names separated by comma: They represent the input signal list. Each signal is represented by a string tha contains both letters and numbers. It should not contains any other symbol.</li>
+        <li> List of string names separated by comma: They represent the output signal list. Each signal is represented by a string tha contains both letters and numbers. It should not contains any other symbol.</li>
     </ul>
 </details>
 
 #### <a name="outputs"></a>  3.3.2 System Ouputs
 <details> 
-    <summary> Put a summary of the section
-    </summary>
-    <p>This sub section should describe ...</p>
+    <summary> Here we describe the command line output of the sistem. </summary>
+  <p> The system has only one output and should be the translation of the MM from dot to kiss2 format. The translation should be written into the file given in input to the system.</p>
 </details>
 
-## <a name="sys-module-1"></a>  4 System Module 1
+## <a name="sys-module-1"></a>  4 Mealy Machine Translator
 <details> 
-    <summary> Put a summary of the section
+    <summary> Here we describe the structure of the system. 
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>First we describe the Static structure of the system, such as Class/Object Diagram, and then we describe the dynamic behaviour of the system. </p>
 </details>
 
 ### <a name="sd"></a>  4.1 Structural Diagrams
 <details> 
-    <summary> Put a summary of the section
+    <summary> Here we describe two different type of view of the system, class and Object Diagram
     </summary>
-    <p>This sub section should describe ...</p>
 </details>
 
 #### <a name="cd"></a>  4.1.1 Class diagram
 <details> 
-    <summary> Put a summary of the section
+    <summary> This section describe the class diagram of the system.
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>/p>
+
+![Use Case Diagram](imgs/use-case.jpg "Use Case Diagram")
+
 </details>
 
 ##### <a name="cd-description"></a>  4.1.1.1 Class Description
