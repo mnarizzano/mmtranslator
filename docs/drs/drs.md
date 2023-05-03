@@ -86,7 +86,7 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 <details> 
     <summary>  Describe at an high level what is the goal of the project and a possible solution
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>The goal of the project is to develop a translator of a MM in dot format into a kiss2 format. The system should take as input a file representing the MM in dot format, a list of Input signals, given for the order, as well as a list of output signals. As a result the system must output into a file the same MM with different format.</p> 
 </details>
 
 ### <a name="tech"></a> 2.2 Technologies used
