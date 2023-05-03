@@ -220,5 +220,8 @@ specifications    </p>
     In this section we define the dynamic model for mm to kiss translation
     </summary>
     <p>This sub section should describe ...</p>
+
+    
 ![ACtivity Diagram](imgs/activity.jpg "Activity")
+
 </details>
