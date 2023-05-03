@@ -133,34 +133,38 @@ specifications    </p>
 </details>
 
 
-
-
 ### <a name="architecture"></a>  3.1 System Architecture
 <details> 
-    <summary> Put a summary of the section
+    <summary> In this section we describe the overll and high level structure of the system. In particular we describe all the modules that compose the system.
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>This system is composed by a single module that translate a MM in dot format into a kiss2 format</p>
 </details>
 
 ### <a name="interfaces"></a>  3.2 System Interfaces
 <details> 
-    <summary> Put a summary of the section
+    <summary> The system should use a command line interface.
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>Here we describe the syntax that the system must use. In particular we try to keep the syntax as simpler as possible. For this reason we define an interface like this:
+    systemname "absolute path to the MM in dot format" "absolute path to the kiss2 file" "list of input signals separated by comma" "list of output signals separated by comma"</p>
 </details>
 
 ### <a name="data"></a>  3.3 System Data
 <details> 
-    <summary> Put a summary of the section
+    <summary> In this section we describe the inputs and their format.    
     </summary>
-    <p>This sub section should describe ...</p>
 </details>
 
 #### <a name="inputs"></a>  3.3.1 System Inputs
 <details> 
     <summary> Put a summary of the section
     </summary>
-    <p>This sub section should describe ...</p>
+  <p> The inputs of the systems are : </p>
+    <ul> 
+        <li> Absolute path to the input file  </li>
+        <li> Absolute path to the output file  </li>
+        <li> List of string names separated by comma</li>
+        <li> List of string names separated by comma</li>
+    </ul>
 </details>
 
 #### <a name="outputs"></a>  3.3.2 System Ouputs
