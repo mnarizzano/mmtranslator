@@ -50,7 +50,8 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
     
 ### <a name="purpose"></a> 1.1 Purpose and Scope
 <details> 
-    <summary> The goal of this section is to describe the purpose of this document and intended audience  </summary>
+    <summary> The objective of this project is to, given a file in a certain format which can be either DOT or KISS2, obtain the other one by having 
+    at disposal a translator which parses the file in the given format and returns the very same file in the other respective format.</summary>
     <p>This sub section should describe ...</p>
 </details>
 
