@@ -105,10 +105,13 @@ specifications    </p>
 </details>
 
 ## <a name="system-overview"></a>  3 System Overview
+
+![Use Case Diagram](imgs/use-case.jpg "Use Case Diagram")
+
     <summary> The system should ....
     </summary>
     
-    ![Use Case Diagram](imgs/use-case.jpg "Use Case Diagram")
+    
     
     <p> ....</p>
   
