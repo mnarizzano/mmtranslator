@@ -138,6 +138,9 @@ specifications    </p>
     <summary> In this section we describe the overll and high level structure of the system. In particular we describe all the modules that compose the system.
     </summary>
     <p>This system is composed by a single module that translate a MM in dot format into a kiss2 format</p>
+    
+![System Architecture](imgs/framework.jpg "System Architecture")    
+    
 </details>
 
 ### <a name="interfaces"></a>  3.2 System Interfaces
