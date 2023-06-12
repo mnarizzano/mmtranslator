@@ -101,7 +101,8 @@ NewChip Designer: A tool developed by NewChip Company that allows users to desig
 <details> 
     <summary>  The goal of this project is to develop a software tool that facilitates the translation of Mealy Machines from one format to another.
     </summary>
-    <p> Mealy Machines are graphical representations used to control the behavior of programmable chips. MNcomp, an enterprise that programs chips for household machines, currently uses the OldChip Designer tool provided by OldChip Company to design Mealy Machines in the dot format. However, with the emergence of a promising new chip produced by NewChip Company, MNcomp desires to utilize the new chips while still using the familiar OldChip Designer tool.
+    <p> Mealy Machines are graphical representations used to control the behavior of programmable chips.
+        <br> MNcomp, an enterprise that programs chips for household machines, currently uses the OldChip Designer tool provided by OldChip Company to design Mealy Machines in the dot format. However, with the emergence of a promising new chip produced by NewChip Company, MNcomp desires to utilize the new chips while still using the familiar OldChip Designer tool.
 
 To achieve this goal, the project aims to create a software tool that can read Mealy Machines stored in the dot format and translate them into the Kiss2 format, which is compatible with the new chips produced by NewChip Company. Additionally, the tool should also be able to convert Mealy Machines from Kiss2 format to dot format, ensuring bidirectional compatibility.</p> 
 </details>
