@@ -85,14 +85,14 @@ NewChip Designer: A tool developed by NewChip Company that allows users to desig
     <summary> The bibliography section is structed as follows:
     </summary>
     <p>Wikipedia's links: 
-      ```
-     https://en.wikipedia.org/wiki/Mealy_machine
-     https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29</p>
-     ```
+      
+     - https://en.wikipedia.org/wiki/Mealy_machine
+     - https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29</p>
+     
     Papers:
-     ```
-    Abdel-Hamid, Amr T., Mohamed Zaki, and Sofiene Tahar. "A tool converting finite state machine to VHDL." Canadian Conference on Electrical and Computer Engineering 2004 (IEEE Cat. No. 04CH37513). Vol. 4. IEEE, 2004.
-     ```
+     
+    - Abdel-Hamid, Amr T., Mohamed Zaki, and Sofiene Tahar. "A tool converting finite state machine to VHDL." Canadian Conference on Electrical and Computer Engineering 2004 (IEEE Cat. No. 04CH37513). Vol. 4. IEEE, 2004.
+     
 </details>
 
 ## <a name="description"></a> 2 Project Description
