@@ -44,21 +44,27 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 
 ##  <a name="intro"></a>  1 Introduction
 <details>
-    <summary> The design specification document reflects the design and provides directions to the builders and coders of the product.</summary> 
-    Through this document, designers communicate the design for the product to which the builders or coders must comply. The design specification should state how the design will meet the requirements.
+    <summary> Develop a software tool capable of reading Mealy Machines in one format and translating them into another format
+    </summary> 
+  The purpose of this Design Requirements Specification (DRS) document is to outline the functionalities of a system that translates Mealy Machines, represented as graphs, from one format to another. The project aims to develop a software tool capable of reading Mealy Machines in one format and translating them into another format. Specifically, the two formats currently known are the dot format and the Kiss2 format.
 </details>
     
 ### <a name="purpose"></a> 1.1 Purpose and Scope
 <details> 
-    <summary> The goal of this section is to describe the purpose of this document and intended audience  </summary>
-    <p>This sub section should describe ...</p>
+    <summary> provide MNcomp employees with a tool that enables them to create Mealy Machines using the familiar OldChip Designer tool while ensuring compatibility with the new chips produced by NewChip Company </summary>
+    <p>The purpose of the software system is to provide MNcomp employees with a tool that enables them to create Mealy Machines using the familiar OldChip Designer tool while ensuring compatibility with the new chips produced by NewChip Company. The tool should be capable of reading Mealy Machines stored in dot format and translating them into Kiss2 format, and vice versa. The scope of the project includes the development of the translation tool and the implementation of the required functionalities to perform the format conversions.
+    </p>
 </details>
 
 ### <a name="def"></a> 1.2 Definitions
 <details> 
-    <summary> Put a summary of the section
+    <summary> The Difinitions is structured as follows:
     </summary>
-    <p>This sub section should describe ...</p>
+    <p> Mealy Machine: A Deterministic Finite State Automaton that has output values determined by both its current state and the current inputs. It is used to model and control the behavior of embedded systems.
+Dot Format: A text-based format used to represent Mealy Machines, designed using the OldChip Designer tool. It contains information about the graph structure and the relationships between input and output signals.
+Kiss2 Format: A text-based format used to represent Mealy Machines, designed using the NewChip Designer tool. It includes information about the graph structure as well as the classification of signals as input or output variables.
+OldChip Designer: A tool developed by OldChip Company and used by MNcomp employees to design Mealy Machines for programming chips.
+NewChip Designer: A tool developed by NewChip Company that allows users to design Mealy Machines, which can be loaded into the new chips produced by NewChip Company.</p>
     
 | First Header  | Second Header |
 | ------------- | ------------- |
@@ -69,33 +75,48 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 
 ### <a name="overview"></a> 1.3 Document Overview
 <details> 
-    <summary> Explain how is organized the document
+    <summary> This DRS document is structured as follows:
     </summary>
     <p>This sub section should describe ...</p>
 </details>
 
 ### <a name="biblio"></a> 1.4 Bibliography
 <details> 
-    <summary> Put a summary of the section
+    <summary> The bibliography section is structed as follows:
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>Wikipedia's links: 
+      ```
+     https://en.wikipedia.org/wiki/Mealy_machine
+     https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29</p>
+     ```
+    Papers:
+     ```
+    Abdel-Hamid, Amr T., Mohamed Zaki, and Sofiene Tahar. "A tool converting finite state machine to VHDL." Canadian Conference on Electrical and Computer Engineering 2004 (IEEE Cat. No. 04CH37513). Vol. 4. IEEE, 2004.
+     ```
 </details>
 
 ## <a name="description"></a> 2 Project Description
 
 ### <a name="project-intro"></a> 2.1 Project Introduction 
 <details> 
-    <summary>  Describe at an high level what is the goal of the project and a possible solution
+    <summary>  The goal of this project is to develop a software tool that facilitates the translation of Mealy Machines from one format to another.
     </summary>
-    <p>The goal of the project is to develop a translator of a MM in dot format into a kiss2 format. The system should take as input a file representing the MM in dot format, a list of Input signals, given for the order, as well as a list of output signals. As a result the system must output into a file the same MM with different format.</p> 
+    <p> Mealy Machines are graphical representations used to control the behavior of programmable chips. MNcomp, an enterprise that programs chips for household machines, currently uses the OldChip Designer tool provided by OldChip Company to design Mealy Machines in the dot format. However, with the emergence of a promising new chip produced by NewChip Company, MNcomp desires to utilize the new chips while still using the familiar OldChip Designer tool.
+
+To achieve this goal, the project aims to create a software tool that can read Mealy Machines stored in the dot format and translate them into the Kiss2 format, which is compatible with the new chips produced by NewChip Company. Additionally, the tool should also be able to convert Mealy Machines from Kiss2 format to dot format, ensuring bidirectional compatibility.</p> 
 </details>
 
 ### <a name="tech"></a> 2.2 Technologies used
 
 <details> 
-    <summary> Description of the overall architecture. </summary>
-    <p>Graphical representation of the system architecture.  May be composed by multiple diagrams depending on the differences in the environment
-specifications    </p>
+    <summary> The overall architecture of the software tool will utilize a combination of programming languages and frameworks </summary>
+    <p>The overall architecture of the software tool will utilize a combination of programming languages and frameworks. The specific technologies to be employed in the development of the tool will be determined based on factors such as compatibility, performance, and ease of use. Possible technologies that may be utilized include:
+
+Programming Languages: Java
+File Parsing and Manipulation: parser libraries
+Graph Visualization: 
+Version Control: Git and GitHub for collaborative development and source code management
+    </p>
 </details>
 
 ### <a name="constraints"></a> 2.3 Assumption and Constraint 
