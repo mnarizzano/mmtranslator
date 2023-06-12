@@ -44,15 +44,15 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 
 ##  <a name="intro"></a>  1 Introduction
 <details>
-    <summary> Develop a software tool capable of reading Mealy Machines in one format and translating them into another format
+    <summary>   The purpose of this Design Requirements Specification (DRS) document is to outline the functionalities of a system that translates Mealy Machines, represented as graphs, from one format to another
     </summary> 
-  The purpose of this Design Requirements Specification (DRS) document is to outline the functionalities of a system that translates Mealy Machines, represented as graphs, from one format to another. The project aims to develop a software tool capable of reading Mealy Machines in one format and translating them into another format. Specifically, the two formats currently known are the dot format and the Kiss2 format.
+The project aims to develop a software tool capable of reading Mealy Machines in one format and translating them into another format. Specifically, the two formats currently known are the dot format and the Kiss2 format.
 </details>
     
 ### <a name="purpose"></a> 1.1 Purpose and Scope
 <details> 
-    <summary> provide MNcomp employees with a tool that enables them to create Mealy Machines using the familiar OldChip Designer tool while ensuring compatibility with the new chips produced by NewChip Company </summary>
-    <p>The purpose of the software system is to provide MNcomp employees with a tool that enables them to create Mealy Machines using the familiar OldChip Designer tool while ensuring compatibility with the new chips produced by NewChip Company. The tool should be capable of reading Mealy Machines stored in dot format and translating them into Kiss2 format, and vice versa. The scope of the project includes the development of the translation tool and the implementation of the required functionalities to perform the format conversions.
+    <summary> The purpose of the software system is to provide MNcomp employees with a tool that enables them to create Mealy Machines using the familiar OldChip Designer tool while ensuring compatibility with the new chips produced by NewChip Company </summary>
+    <p>The tool should be capable of reading Mealy Machines stored in dot format and translating them into Kiss2 format, and vice versa. The scope of the project includes the development of the translation tool and the implementation of the required functionalities to perform the format conversions.
     </p>
 </details>
 
@@ -110,7 +110,7 @@ To achieve this goal, the project aims to create a software tool that can read M
 
 <details> 
     <summary> The overall architecture of the software tool will utilize a combination of programming languages and frameworks </summary>
-    <p>The overall architecture of the software tool will utilize a combination of programming languages and frameworks. The specific technologies to be employed in the development of the tool will be determined based on factors such as compatibility, performance, and ease of use. Possible technologies that may be utilized include:
+    <p>The specific technologies to be employed in the development of the tool will be determined based on factors such as compatibility, performance, and ease of use. Possible technologies that may be utilized include:
 
 Programming Languages: Java
 File Parsing and Manipulation: parser libraries
@@ -121,9 +121,16 @@ Version Control: Git and GitHub for collaborative development and source code ma
 
 ### <a name="constraints"></a> 2.3 Assumption and Constraint 
 <details> 
-    <summary> Put a summary of the section
+    <summary> The project is based on the following assumptions and constraints:
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>
+        Assumption 1: The Mealy Machines designed using the OldChip Designer tool and the NewChip Designer tool are functionally equivalent, despite having different user interfaces.
+Assumption 2: The input and output signals of the Mealy Machines have unique names and occur in the input files.
+Constraint 1: The translation tool must be able to process Mealy Machines stored in the dot format and convert them accurately to the Kiss2 format.
+Constraint 2: The translation tool should also be capable of converting Mealy Machines from the Kiss2 format to the dot format while preserving the input/output signal information.
+Constraint 3: The translation tool should provide an intuitive and user-friendly interface for MNcomp employees to interact with, simplifying the conversion process.
+Constraint 4: The translation tool should ensure compatibility with the existing systems and infrastructure at MNcomp, including the chip programming workflow and file management practices.
+These assumptions and constraints will guide the development process of the software tool, ensuring that it meets the specific requirements and expectations of MNcomp.</p>
 </details>
 
 ## <a name="system-overview"></a>  3 System Overview
@@ -174,8 +181,18 @@ Version Control: Git and GitHub for collaborative development and source code ma
 
 ### <a name="data"></a>  3.3 System Data
 <details> 
-    <summary> In this section we describe the inputs and their format.    
+    <summary> The system deals with two main data formats: dot format and Kiss2 format, which represent Mealy Machines.
     </summary>
+    Dot Format:
+    ```
+The dot format is a textual representation of a Mealy Machine in a graph structure. It consists of a set of nodes representing the states of the machine and edges representing the transitions between states. Each node and edge can have additional properties and labels associated with them. In the dot format, the Mealy Machine is defined using a specific syntax and conventions. To manage and manipulate the data in the dot format, the system will utilize data structures such as graphs or adjacency lists to represent the Mealy Machine. These data structures will capture the relationships between states and transitions, along with associated properties and labels. Additionally, the system will parse and extract relevant information from the dot format, such as state names, input/output signal names, and transition conditions
+    Kiss2 Format:
+```
+    The Kiss2 format is another textual representation of a Mealy Machine. It maintains additional information about the variables, specifically indicating if a signal is an input or an output variable. The Kiss2 format provides a structured way to represent the Mealy Machine, including input/output variable declarations and transition conditions.
+
+Similar to the dot format, the system will need to handle the data in the Kiss2 format during the translation process. It will employ suitable data structures to represent the Mealy Machine and manage the variables' input/output information.
+    ```
+  By managing and manipulating the data in both the dot and Kiss2 formats effectively, the system can facilitate the translation process and ensure the correctness and compatibility of the Mealy Machines between the two formats.  
 </details>
 
 #### <a name="inputs"></a>  3.3.1 System Inputs
