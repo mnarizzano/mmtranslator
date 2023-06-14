@@ -114,9 +114,9 @@ To achieve this goal, the project aims to create a software tool that can read M
     <summary> The overall architecture of the software tool will utilize a combination of programming languages and frameworks </summary>
     <p>The specific technologies to be employed in the development of the tool will be determined based on factors such as compatibility, performance, and ease of use. Possible technologies that may be utilized include:
 
-Programming Languages: Java
-File Parsing and Manipulation: parser libraries
-Graph Visualization: 
+Programming Languages: Java <br>
+File Parsing and Manipulation: parser libraries <br>
+Graph Visualization: <br>
 Version Control: Git and GitHub for collaborative development and source code management
     </p>
 </details>
@@ -126,12 +126,12 @@ Version Control: Git and GitHub for collaborative development and source code ma
     <summary> The project is based on the following assumptions and constraints:
     </summary>
     <p>
-        Assumption 1: The Mealy Machines designed using the OldChip Designer tool and the NewChip Designer tool are functionally equivalent, despite having different user interfaces.
-Assumption 2: The input and output signals of the Mealy Machines have unique names and occur in the input files.
-Constraint 1: The translation tool must be able to process Mealy Machines stored in the dot format and convert them accurately to the Kiss2 format.
-Constraint 2: The translation tool should also be capable of converting Mealy Machines from the Kiss2 format to the dot format while preserving the input/output signal information.
-Constraint 3: The translation tool should provide an intuitive and user-friendly interface for MNcomp employees to interact with, simplifying the conversion process.
-Constraint 4: The translation tool should ensure compatibility with the existing systems and infrastructure at MNcomp, including the chip programming workflow and file management practices.
+        Assumption 1: The Mealy Machines designed using the OldChip Designer tool and the NewChip Designer tool are functionally equivalent, despite having different user interfaces. <br>
+Assumption 2: The input and output signals of the Mealy Machines have unique names and occur in the input files. <br>
+Constraint 1: The translation tool must be able to process Mealy Machines stored in the dot format and convert them accurately to the Kiss2 format. <br>
+Constraint 2: The translation tool should also be capable of converting Mealy Machines from the Kiss2 format to the dot format while preserving the input/output signal information. <br>
+Constraint 3: The translation tool should provide an intuitive and user-friendly interface for MNcomp employees to interact with, simplifying the conversion process. <br>
+Constraint 4: The translation tool should ensure compatibility with the existing systems and infrastructure at MNcomp, including the chip programming workflow and file management practices. <br>
 These assumptions and constraints will guide the development process of the software tool, ensuring that it meets the specific requirements and expectations of MNcomp.</p>
 </details>
 
