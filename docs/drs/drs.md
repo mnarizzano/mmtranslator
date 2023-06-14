@@ -178,7 +178,7 @@ These assumptions and constraints will guide the development process of the soft
     <summary> The system should use a command line interface.
     </summary>
     <p>Here we describe the syntax that the system must use. In particular we try to keep the syntax as simpler as possible. For this reason we define an interface like this:
-    systemname "absolute path to the MM in dot format" "absolute path to the kiss2 file" "list of input signals separated by comma" "list of output signals separated by comma"</p>
+    system name "absolute path to the MM in dot format" "absolute path to the kiss2 file" "list of input signals separated by comma" "list of output signals separated by comma"</p>
 </details>
 
 ### <a name="data"></a>  3.3 System Data
