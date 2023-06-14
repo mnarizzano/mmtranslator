@@ -185,8 +185,8 @@ These assumptions and constraints will guide the development process of the soft
 <details> 
     <summary> The system deals with two main data formats: dot format and Kiss2 format, which represent Mealy Machines.
     </summary>
-    Dot Format:
-    ```
+    Dot Format: <br>
+    
 The dot format is a textual representation of a Mealy Machine in a graph structure. It consists of a set of nodes representing the states of the machine and edges representing the transitions between states. Each node and edge can have additional properties and labels associated with them. In the dot format, the Mealy Machine is defined using a specific syntax and conventions. To manage and manipulate the data in the dot format, the system will utilize data structures such as graphs or adjacency lists to represent the Mealy Machine. These data structures will capture the relationships between states and transitions, along with associated properties and labels. Additionally, the system will parse and extract relevant information from the dot format, such as state names, input/output signal names, and transition conditions <br>
     Kiss2 Format: <br>
 
