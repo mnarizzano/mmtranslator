@@ -14,7 +14,7 @@ DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del So
 | 1 | 12/04/23 | Massimo Narizzano | First Versionn of the document|
 | 2 | 13/04/23 | Massimo Narizzano | Completed the second Use casem, added the Use case diagram|
 | 3 | 03/05/23 | Massimo Narizzano | Added the UML Diagrams|
-| 3 | 11/05/23 | Fatemeh Ozgoli-Romina Adhami | Added the Intro - Description|
+| 3 | 11/05/23 | Fatemeh Ozgoli-Romina Adhami | Added the Intro - System Overview|
 
 ## Table of Content
 
