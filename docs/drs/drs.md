@@ -187,13 +187,14 @@ These assumptions and constraints will guide the development process of the soft
     </summary>
     Dot Format:
     ```
-The dot format is a textual representation of a Mealy Machine in a graph structure. It consists of a set of nodes representing the states of the machine and edges representing the transitions between states. Each node and edge can have additional properties and labels associated with them. In the dot format, the Mealy Machine is defined using a specific syntax and conventions. To manage and manipulate the data in the dot format, the system will utilize data structures such as graphs or adjacency lists to represent the Mealy Machine. These data structures will capture the relationships between states and transitions, along with associated properties and labels. Additionally, the system will parse and extract relevant information from the dot format, such as state names, input/output signal names, and transition conditions
-    Kiss2 Format:
-```
+The dot format is a textual representation of a Mealy Machine in a graph structure. It consists of a set of nodes representing the states of the machine and edges representing the transitions between states. Each node and edge can have additional properties and labels associated with them. In the dot format, the Mealy Machine is defined using a specific syntax and conventions. To manage and manipulate the data in the dot format, the system will utilize data structures such as graphs or adjacency lists to represent the Mealy Machine. These data structures will capture the relationships between states and transitions, along with associated properties and labels. Additionally, the system will parse and extract relevant information from the dot format, such as state names, input/output signal names, and transition conditions <br>
+    Kiss2 Format: <br>
+
     The Kiss2 format is another textual representation of a Mealy Machine. It maintains additional information about the variables, specifically indicating if a signal is an input or an output variable. The Kiss2 format provides a structured way to represent the Mealy Machine, including input/output variable declarations and transition conditions.
 
 Similar to the dot format, the system will need to handle the data in the Kiss2 format during the translation process. It will employ suitable data structures to represent the Mealy Machine and manage the variables' input/output information.
-    ```
+    <br>
+   
   By managing and manipulating the data in both the dot and Kiss2 formats effectively, the system can facilitate the translation process and ensure the correctness and compatibility of the Mealy Machines between the two formats.  
 </details>
 
