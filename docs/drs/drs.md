@@ -199,27 +199,52 @@ specifications    </p>
 
 ##### <a name="cd-description"></a>  4.1.1.1 Class Description
 <details> 
-    <summary> Put a summary of the section
+    <summary> The MealyMachineTranslator class is responsible for translating Mealy Machines between the dot format and the Kiss2 format. It handles the conversion process and manages the necessary data structures and operations.
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>Description:
+
+Properties:
+* dotFile: A string representing the path to the input file containing a Mealy Machine in dot format.
+* kiss2File: A string representing the path to the output file where the translated Mealy Machine in Kiss2 format will be written.
+Methods:
+* translateToKiss2(): This method reads the Mealy Machine from the dotFile, performs the necessary transformations, and generates the equivalent Kiss2 format. The translated Mealy Machine is then saved to the kiss2File.
+* translateToDot(): This method reads the Mealy Machine from the kiss2File, performs the necessary transformations, and generates the equivalent dot format. The translated Mealy Machine is then saved to the dotFile.
+* validateInput(): This method checks the validity of the input files (dotFile and kiss2File) and ensures they exist and are accessible.
+* extractSignals(): This method extracts the list of input and output signals from the Mealy Machine in dot format and Kiss2 format, respectively.
+* updateInputSignals(signals: List[str]): This method updates the list of input signals in the Mealy Machine to match the provided signals list.
+* updateOutputSignals(signals: List[str]): This method updates the list of output signals in the Mealy Machine to match the provided signals list.
+Dependencies:
+* DotFileParser: A helper class responsible for parsing and extracting information from Mealy Machine files in dot format.
+* Kiss2FileParser: A helper class responsible for parsing and extracting information from Mealy Machine files in Kiss2 format.
+* DotFileWriter: A helper class responsible for writing Mealy Machine files in dot format.
+* Kiss2FileWriter: A helper class responsible for writing Mealy Machine files in Kiss2 format.
+</p>
 </details>
 
 #### <a name="od"></a>  4.1.2 Object diagram
 <details> 
-    <summary> Put a summary of the section
+    <summary> we have three objects: MealyMachine, State, and Transition. The MealyMachine object represents the overall structure of the mealy machine and contains lists of states, inputs, and outputs. Each state objects has a name and a list of transitions associated with it. Each transition objects represents a transition between states and contains information about the input, output, and next state.
     </summary>
     <p>This sub section should describe ...</p>
     
-![Object Diagram](imgs/object.jpg "Class Diagram")
+![Object Diagram]((https://github.com/mnarizzano/mmtranslator/blob/SE_Project_RF/docs/drs/imgs/Object.jpg))
 
 </details>
 
 #### <a name="dm"></a>  4.2 MM2Kiss translation
 <details> 
     <summary> 
-    In this section we define the dynamic model for mm to kiss translation
+    User interacts with the TranslationTool object.
     </summary>
-    <p>This sub section should describe ...</p>
+    <p>
+User provides input file path containing the Mealy Machine in dot format and output file path for the translated KISS format.
+TranslationTool object receives the input file path and output file path.
+TranslationTool reads the input file, parsing the Mealy Machine in dot format.
+TranslationTool extracts the necessary information from the dot file, including the states, transitions, inputs, and outputs.
+TranslationTool performs the necessary translation logic to convert the Mealy Machine from dot format to KISS format.
+TranslationTool generates the translated KISS file with the converted Mealy Machine.
+TranslationTool writes the KISS file to the specified output file path.
+The translation process is completed, and the TranslationTool object provides feedback or confirmation to the user.</p>
 
     
 ![ACtivity Diagram](imgs/activity.jpg "Activity")
