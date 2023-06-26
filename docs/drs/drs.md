@@ -233,7 +233,7 @@ Similar to the dot format, the system will need to handle the data in the Kiss2 
     <summary> This section describe the class diagram of the system.
     </summary>
     
-![Class Diagram](imgs/َUML.jpg "Class Diagram")
+![Class Diagram](imgs/َUML.jpg "UML")
 
 </details>
 
