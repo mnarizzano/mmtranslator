@@ -179,21 +179,21 @@ specifications    </p>
 <details> 
     <summary> Here we describe the structure of the system. 
     </summary>
-    <p>First we describe the Static structure of the system, such as Class/Object Diagram, and then we describe the dynamic behaviour of the system. </p>
+    <p>First we describe the Static structure of the system, such as the Class/Object Diagram, and then we describe the dynamic behavior of the system. </p>
 </details>
 
 ### <a name="sd"></a>  4.1 Structural Diagrams
 <details> 
-    <summary> Here we describe two different type of view of the system, class and Object Diagram
+    <summary> Here we describe two different types of view of the system, class, and Object Diagram
     </summary>
 </details>
 
 #### <a name="cd"></a>  4.1.1 Class diagram
 <details> 
-    <summary> This section describe the class diagram of the system.
+    <summary> This section describes the class diagram of the system.
     </summary>
     
-![Class Diagram](imgs/class.jpg "Class Diagram")
+![Class Diagram]((https://github.com/mnarizzano/mmtranslator/blob/SE_Project_RF/docs/drs/imgs/UML.jpg))
 
 </details>
 
