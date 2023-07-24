@@ -1,79 +1,69 @@
-/**
+package org.mncomp.mmtranslator.State; /**
  * This file contains the definition of the State class 
  * @author mnarizzano
  *
  */
+import org.mncomp.mmtranslator.*;
 
-package package org.mncomp.mmtranslator;
-
-import main.java.org.mncorp.MM;
-
-/**
- * This Define all the methods that are necessary to store  the state details of a MM.
- * @see ... for more details
- * @author mnarizzano
- *
- */
 public class State {
-    private String name;       /* Name of the State*/
-    private Bool   init;   /* Indicate if the state is an initial state (True) or not(False)*/
+    private String name;       /* Name of the State */
+    private boolean init;      /* Indicates if the state is an initial state (true) or not (false) */
 
     /**
      * Default Constructor
      */
-    public State() {}
-	
+    public State() {
+    }
+
     /**
-     * Constractor with param.
+     * Constructor with parameters.
      * 
-     * @param name, the name of the state.
-     * @param init, indicate that the state is of init. Is a boolean value, if True the state is an initial state.
+     * @param name The name of the state.
+     * @param init Boolean value indicating whether the state is an initial state (true) or not (false).
      */
-    public State(String name, bool init) { 
-	setName(name);
-	if (init) {
-	    setInit();
-	} else {
-	    unsetInit();
-	}
+    public State(String name, boolean init) {
+        this.name = name;
+        this.init = init;
     }
 
     /**
-     * Set the name of the State Object 
-     * @param name, name of the state
+     * Set the name of the State.
+     * 
+     * @param name Name of the state.
      */
-    void setName(String Name){}
-
-    /**
-     * Get the name of the State Object 
-     * @return the name of the state
-     */
-    String getName(){
-	return name;
-    }
-
-
-    /**
-     * Set the state as an initial State
-     */
-    void setInitial(){
-	init = true;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
-     * Set the state as not initial. 
+     * Get the name of the State.
+     * 
+     * @return The name of the state.
      */
-    String unsetInitial(){
-	init = false;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Ask if the State is inisial.
-     * @return True if the state is initial, False otherwise 
+     * Set the state as an initial state.
      */
-    Bool isInitial(){
-	return init;
+    public void setInitial() {
+        init = true;
     }
 
-    
+    /**
+     * Set the state as not an initial state.
+     */
+    public void unsetInitial() {
+        init = false;
+    }
+
+    /**
+     * Check if the State is an initial state.
+     * 
+     * @return True if the state is an initial state, false otherwise.
+     */
+    public boolean isInitial() {
+        return init;
+    }
 }
