@@ -1,0 +1,8 @@
+digraph MealyMachine {
+
+    State1 [label="State1"];
+    State2 [label="State2"];
+    State1 -> State2 [label=inputA / outputX];
+
+
+}
