@@ -1,22 +1,37 @@
-/**
- * This file contains the definition of the variables that are added
- * to each transition/mealy machine. A variables is called Signal, and
- * other than names it has also a value defining if it is positive
- * signal or a negative signal.
- * @author mnarizzano
- *
- */
-
-package package org.mncomp.mmtranslator;
+// This package represents the Signal module in the mmtranslator project
+package org.mncomp.mmtranslator.Signal;
 
 
-/**
- * This Define all the methods that are necessary to store the Signal
- * labelling Transitions
- * @see ... for more details
- * @author mnarizzano
- *
- */
 public class Signal {
 
+    // Name of the signal
+    private String name;
+
+    // Value of the signal indicating positivity/negativity (
+    private int value;
+
+    
+     // Constructs a Signal with a given name and value.
+    public Signal(String name, int value) {
+        this.name = name;
+        // this.value = value; // Commented out as value is not currently used
+    }
+
+    
+    // Constructs a Signal with a given name.
+    public Signal(String name){
+        this.name = name;
+    }
+
+    
+     //Gets the name of the signal.
+    public String getSignalName() {
+        return name;
+    }
+
+
+     //Sets the name of the signal.
+    public void setName(String name) {
+        this.name = name;
+    }
 }
