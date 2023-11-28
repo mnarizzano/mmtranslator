@@ -1,117 +1,101 @@
-// Package declaration for the Kiss2Writer class
-package org.mncomp.mmtranslator.Kiss2Writer;
-// Import statements for required classes
-import org.mncomp.mmtranslator.MM.MM;
+package org.mncomp.mmtranslator.MM;
+import org.mncomp.mmtranslator.DotParser.DotParser;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
 import org.mncomp.mmtranslator.Signal.Signal;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-// Class definition for the Kiss2Writer
-public class Kiss2Writer {
-    // BufferedWriter for writing to the Kiss2 file
-    private BufferedWriter fileWriter;
+import java.util.ArrayList;
+import java.util.List;
 
-    // Reference to the Mealy Machine
-    private MM mm;
+public class MM {
+    // Unique identifier for the Mealy Machine
+    private int id;
+    // Lists to store states, transitions, input signals, and output signals
+    private List<State> states;
+    private List<Transition> transitions;
+    private List<Signal> inputSignals;
+    private List<Signal> outputSignals;
 
-    // Constructor for Kiss2Writer class
-    public Kiss2Writer(String filePath, MM mm) {
-        try {
-            // Initialize the BufferedWriter with the specified file path
-            fileWriter = new BufferedWriter(new FileWriter(filePath));
-        } catch (IOException e) {
-            // Handle IOException if file initialization fails
-            e.printStackTrace();
-        }
-        this.mm = mm; // Set the reference to the Mealy Machine
+    // Initial state for the Mealy Machine
+    private State resetState;
+
+    // Default constructor to initialize lists and reset state
+    public MM() {
+        id = 0;
+        states = new ArrayList<>();
+        transitions = new ArrayList<>();
+        inputSignals = new ArrayList<>();
+        outputSignals = new ArrayList<>();
+        resetState = null;
     }
 
-    // Method to write the Mealy Machine to a Kiss2 file
-    public void writeKiss2(MM mm) {
-        try {
-            // Check if the fileWriter is not null
-            if (fileWriter != null) {
-                // Write the number of input signals to the file
-                fileWriter.write(".i " + mm.getInputSignals().size());
-                fileWriter.newLine();
-
-                // Write the number of output signals to the file
-                fileWriter.write(".o " + mm.getOutputSignals().size());
-                fileWriter.newLine();
-
-                // Write the number of states to the file
-                fileWriter.write(".s " + mm.getAllStates().size());
-                fileWriter.newLine();
-
-                // Write the ID of the reset state to the file
-                fileWriter.write(".r " + mm.getResetState().getId());
-                fileWriter.newLine();
-
-                // Write the number of transitions to the file
-                fileWriter.write(".p " + mm.getAllTransitions().size());
-                fileWriter.newLine();
-
-                // Write the names of input signals to the file
-                for (Signal signal : mm.getInputSignals()) {
-                    fileWriter.write(".v " + signal.getSignalName());
-                    fileWriter.newLine();
-                }
-
-                // Write the names of output signals to the file
-                for (Signal signal : mm.getOutputSignals()) {
-                    fileWriter.write(".v " + signal.getSignalName());
-                    fileWriter.newLine();
-                }
-
-                // Write state definitions to the file
-                for (State state : mm.getAllStates()) {
-                    fileWriter.write(Integer.toString(state.getId()));
-                    fileWriter.newLine();
-                }
-
-                // Write transitions to the file
-                for (Transition transition : mm.getAllTransitions()) {
-                    String input = transition.getInputSignals().getSignalName();
-                    String output = transition.getOutputSignals().getSignalName();
-                    String line = transition.getStateFrom().getId() + " " + input + " " + output + " " + transition.getStateTo().getId();
-                    fileWriter.write(line);
-                    fileWriter.newLine();
-                }
-
-                // Flush the BufferedWriter
-                fileWriter.flush();
-            }
-
-            // Close the BufferedWriter
-            fileWriter.close();
-        } catch (IOException e) {
-            // Handle IOException if an error occurs during writing
-            e.printStackTrace();
-        } finally {
-            try {
-                // Close the BufferedWriter in the finally block
-                if (fileWriter != null) {
-                    fileWriter.close();
-                }
-            } catch (IOException e) {
-                // Handle IOException if an error occurs during closing
-                e.printStackTrace();
-            }
-        }
+    // Getter method for the Mealy Machine's unique identifier
+    public int getId() {
+        return id;
     }
 
-    // Method to close the Kiss2 file
-    public void closeKiss2File() {
-        try {
-            // Close the BufferedWriter if it is not null
-            if (fileWriter != null) {
-                fileWriter.close();
+    // Setter method for the Mealy Machine's unique identifier
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Getter method to retrieve all states in the Mealy Machine
+    public List<State> getAllStates() {
+        return states;
+    }
+
+    // Method to add a state to the Mealy Machine
+    public void addState(State state) {
+        states.add(state);
+    }
+
+    // Getter method to retrieve all transitions in the Mealy Machine
+    public List<Transition> getAllTransitions() {
+        return transitions;
+    }
+
+    // Method to add a transition to the Mealy Machine
+    public void addTransition(Transition transition) {
+        transitions.add(transition);
+    }
+
+    // Getter method to retrieve all input signals in the Mealy Machine
+    public List<Signal> getInputSignals() {
+        return inputSignals;
+    }
+
+    // Method to add an input signal to the Mealy Machine
+    public void addInputSignal(Signal signal) {
+        inputSignals.add(signal);
+    }
+
+    // Getter method to retrieve all output signals in the Mealy Machine
+    public List<Signal> getOutputSignals() {
+        return outputSignals;
+    }
+
+    // Method to add an output signal to the Mealy Machine
+    public void addOutputSignal(Signal signal) {
+        outputSignals.add(signal);
+    }
+
+    // Getter method to retrieve the reset state of the Mealy Machine
+    public State getResetState() {
+        return resetState;
+    }
+
+    // Setter method to set the reset state of the Mealy Machine
+    public void setResetState(State state) {
+        resetState = state;
+    }
+
+    // Method to get the state number based on the state ID
+    public int getStateNo(int id) {
+        for (State state : states) {
+            if (state.getId() == id) {
+                return state.getStateNo();
             }
-        } catch (IOException e) {
-            // Handle IOException if an error occurs during closing
-            e.printStackTrace();
         }
+        return -1; // Return -1 if the state with the given ID is not found
     }
 }
