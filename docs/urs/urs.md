@@ -1,23 +1,15 @@
 
 ### User Requirements Specification Document
 ### Mealy Machine Translator
-##### DIBRIS – Università di Genova. Scuola Politecnica, Software Engineering Course 80154
+#####
 
 
 **VERSION : 1.3**
 
 **Authors**  
-Massimo Narizzano
+
 
 **REVISION HISTORY**
-
-| Version    | Date        | Authors      | Notes        |
-| ----------- | ----------- | ----------- | ----------- |
-| 1.0 | 27/02/2023 | Massimo Narizzano| Given a first description of the project. Completed section 1|
-| 1.1 | 01/03/2023 | Massimo Narizzano| Completed section 2|
-| 1.2 | 20/03/2023 | Massimo Narizzano| Added some requirements|
-| 1.3 | 22/03/2023 | Massimo Narizzano| Modified section 2 with new informations|
-
 
 
 
@@ -42,20 +34,19 @@ Massimo Narizzano
 ## 1. Introduction
 
 <a name="sp1.1"></a>
-This document is a simple example of a User Requirements Documents that is used as running example in the Software Engineering class at University of Genoa, course number 80154. It describes the functionality of a simple software that translate a Mealy machine from a format to another format.
+This document is a simple example of a User Requirements Documents  describes the functionality of a simple software that translate a Mealy machine from a format to another format.
 
 ### 1.1 Document Scope
 
-<a name="sp1.2"></a>
-This document is provided to the students of the SE-80154 course as an example of User Requirements documents. It shows how requirements can be written and which are the main errors in writing specifications. It may contains errors that are presents for didactical reasons. 
+This document shows how requirements can be written and which are the main errors in writing specifications. It may contains errors that are presents for didactical reasons. 
 
 ### 1.2 Definitios and Acronym
 
 
 | Acronym				| Definition | 
 | ------------------------------------- | ----------- | 
-| SE23                                  | Software Engineering course, 2023 at university of Genoa|
-| SE-80154                              | Software Engineering course, 2023 at university of Genoa, 80154 is its ID number|
+| SE23                                  | |
+| SE-80154                              | |
 | MM                                    | [Mealy Machine](https://en.wikipedia.org/wiki/Mealy_machine) is formalism used to synthetize models of systems|
 | DOT                                   | [Graph Description language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) Is a text language used to describe graphs.|
 | GRAPHVIZ                              | [Graphviz](https://www.graphviz.org/) is open source graph visualization software. Can be used to visualize the MM in DOT format|

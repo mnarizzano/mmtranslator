@@ -1,34 +1,36 @@
 package org.mncomp.mmtranslator;
 import org.mncomp.mmtranslator.MM.MM;
-import org.mncomp.mmtranslator.State.State;
-import org.mncomp.mmtranslator.Transition.Transition;
-import org.mncomp.mmtranslator.Signal.Signal;
-import org.mncomp.mmtranslator.Kiss2Writer.Kiss2Writer;
 import org.mncomp.mmtranslator.DotParser.DotParser;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import org.mncomp.mmtranslator.Kiss2Writer.*;
+
 import java.io.IOException;
 public class MMTranslaltor
 {
-
     public static void main( String[] args ) throws IOException {
-        MM mealy = new MM();
-        DotParser dp = new DotParser("/Users/fateme/Documents/mmtranslator/src/mmtranslator/src/dot0.dot",mealy);
-        Kiss2Writer kw = new Kiss2Writer("/Users/fateme/Documents/mmtranslator/src/mmtranslator/src/bbara.kiss2",mealy);
-
+        // Create an instance of Mealy Machine
+        MM mm = new MM();
+        // Create a DotParser instance with the file path and the Mealy Machine instance
+        DotParser dp = new DotParser("/Users/fateme/Downloads/mmtranslator 3/src/mmtranslator/src/dot0.dot",mm);
+        // Create a Kiss2Writer instance with the file path and the Mealy Machine instance
+        Kiss2Writer kw = new Kiss2Writer("/Users/fateme/Downloads/mmtranslator 3/src/mmtranslator/src/bbara.kiss2",mm);
         try {
-            dp.parseDotFile("/Users/fateme/Documents/mmtranslator/src/mmtranslator/src/dot0.dot");
+            // Parse the Dot file to populate the Mealy Machine
+            dp.parseDotFile("/Users/fateme/Downloads/mmtranslator 3/src/mmtranslator/src/dot0.dot");
         } catch (IOException e) {
+            // Handle IOException gracefully or log the error
             throw new RuntimeException(e);
         }
-
-        kw.writeKiss2(mealy);
-     //   kw.closeKiss2File();
+        // Print information about the Mealy Machine
+        System.out.println("Input Signals: " + mm.getInputSignals().size());
+        System.out.println("Output Signals: " + mm.getOutputSignals().size());
+        System.out.println("Number of States: " + mm.getAllStates().size());
+        System.out.println("Number of Transitions: " + mm.getAllTransitions().size());
+        // Write the Mealy Machine to the Kiss2 file
+        kw.writeKiss2(mm);
+        // Write the Mealy Machine to the Kiss2 file
+        kw.closeKiss2File();
         dp.getMealyMachine();
+        // Close the Dot file
         dp.closeDotFile();
-
-
-
-
     }
 }

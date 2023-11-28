@@ -2,18 +2,11 @@
 
 ## Design Requirement Specification Document
 
-DIBRIS – Università di Genova. Scuola Politecnica, Corso di Ingegneria del Software 80154
 
 
-<div align='right'> <b> Authors </b> <br> Massimo Narizzano <br>  </div>
 
 ### REVISION HISTORY
 
-| Version | Data | Author(s)| Notes |
-| ---------|------|--------|------  |
-| 1 | 12/04/23 | Massimo Narizzano | First Versionn of the document|
-| 2 | 13/04/23 | Massimo Narizzano | Completed the second Use casem, added the Use case diagram|
-| 3 | 03/05/23 | Massimo Narizzano | Added the UML Diagrams|
 
 
 ## Table of Content
