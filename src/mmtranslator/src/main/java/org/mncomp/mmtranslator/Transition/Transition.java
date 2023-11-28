@@ -1,116 +1,86 @@
-/**
- * This file contains the definition of the Transition class A
- * transition is a connection with to State, a starting State and an
- * arrival State. It also contains a list of input signals and a list
- * of output Signals assigned to true or false. 
- * @author mnarizzano
- *
- */
+package org.mncomp.mmtranslator.Transition;
+import org.mncomp.mmtranslator.State.State;
+import org.mncomp.mmtranslator.Signal.Signal;
+import java.util.concurrent.atomic.AtomicInteger;
 
-package package org.mncomp.mmtranslator;
-
-import main.java.org.mncorp.State;
-
-/**
- * This Define all the methods that are necessary to store  the Transition details of a MM.
- * @see ... for more details
- * @author mnarizzano
- *
- */
 public class Transition {
-    
-    private static final AtomicInteger count = new AtomicInteger(0);  /* Counter for Unique Name of the Transition*/
-    private final int id;                                             /* Unique id of the transition. Fianl because can not be modified*/
-    private State stateTo;                                                 /* Arrival State of the Transition. */
-    private State stateFrom;                                               /* Starting State of the Transition. */
-    private Signal[] inputSignals;                                    /* Set of input signals*/
-    private Signal[] outputSignals;                                   /* Set of output signals*/
+    // Counter to generate unique identifiers for transitions
+    private static final AtomicInteger count = new AtomicInteger(0);
 
-    
-    /**
-     * Default Constructor
-     */
+    // Unique identifier for the transition
+    private final int id;
+
+    // State to which the transition leads
+    private State stateTo;
+
+    // State from which the transition originates
+    private State stateFrom;
+
+    // Input signal for the transition
+    private Signal inputSignals;
+
+    // Output signal for the transition
+    private Signal outputSignals;
+
+    // Default constructor to initialize the unique identifier
     public Transition() {
-	id = count.incrementAndGet();
-    }
-	
-    /**
-     * Constractor with param.
-     * 
-     * @param from, starting state of the Transition.
-     * @param to, arrival state of the transition
-     * @param InputSignals, rapresent the set of assigned input signals 
-     * @param InputSignals, rapresent the set of assigned output signals 
-     */
-    public Transition(State from, State to, Signal[] inputSignals, Signal[] outputSignals){
-	this.Transition();
-	setStateFrom(from);
-	setStateTo(to);
-	setInputSignals(inputSignals);
-	setOutputSignals(outputSignals);
+        id = count.incrementAndGet();
     }
 
-    /**
-     * 
-     * @return the id(name)  of the transition
-     */
-    int getId(){ return id;}
+    // Parameterized constructor to create a transition with specified states, input, and output signals
+    public Transition(State from, State to, Signal[] inputSignals, Signal[] outputSignals) {
+        // Call the default constructor to set the unique identifier
+        this();
 
-    /**
-     * @return the arrival state of the transition
-     */
-    State getStateTo(){
-	return stateTo;
+        // Set the originating and destination states, input, and output signals for the transition
+        setStateFrom(from);
+        setStateTo(to);
+        setInputSignals(inputSignals[0]);
+        setOutputSignals(outputSignals[0]);
     }
 
-    /**
-     * @return the starting state of the transition
-     */
-    State getStateFrom(){
-	return stateFrom;
+    // Getter method to retrieve the unique identifier of the transition
+    public int getId() {
+        return id;
     }
 
-    /**
-     * @return return the set of assigned input signals 
-     */
-    Signal[] getInputSignals(){
-	return inputSignals;
+    // Getter method to retrieve the state to which the transition leads
+    public State getStateTo() {
+        return stateTo;
     }
 
-        /**
-     * @return return the set of assigned output signals 
-     */
-    Signal[] getOutputSignals(){
-	return outputSignals;
+    // Getter method to retrieve the state from which the transition originates
+    public State getStateFrom() {
+        return stateFrom;
     }
 
-
- 
-    /**
-     * @param to, is the arrival state of the transition
-     */
-    void setStateTo(State to){
-	stateTo = to;
+    // Getter method to retrieve the input signal for the transition
+    public Signal getInputSignals() {
+        return inputSignals;
     }
 
-    /**
-     * @param from, the starting state of the transition
-     */
-    void setStateFrom(State from){
+    // Getter method to retrieve the output signal for the transition
+    public Signal getOutputSignals() {
+        return outputSignals;
+    }
+
+    // Setter method to set the state to which the transition leads
+    public void setStateTo(State to) {
+        stateTo = to;
+    }
+
+    // Setter method to set the state from which the transition originates
+    public void setStateFrom(State from) {
         stateFrom = from;
     }
 
-    /**
-     * @param input, a set of assigned input signals 
-     */
-    void setInputSignals(Signal[] input){
-	inputSignals = input.clone();
-    }
-    
-    /**
-     * @param output, a set of assigned output signals 
-     */
-    void setOutputSignals(Signal[] output){
-	outputSignals = output.clone();
+    // Setter method to set the input signal for the transition
+    public void setInputSignals(Signal input) {
+        inputSignals = input;
     }
 
+    // Setter method to set the output signal for the transition
+    public void setOutputSignals(Signal output) {
+        outputSignals = output;
+    }
+}
