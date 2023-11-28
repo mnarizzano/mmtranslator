@@ -1,6 +1,8 @@
 package org.mncomp.mmtranslator.Transition;
+
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Signal.Signal;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Transition {
