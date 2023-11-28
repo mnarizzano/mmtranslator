@@ -10,7 +10,7 @@ import org.mncomp.mmtranslator.Signal.Signal;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
 
-public class DotParser {
+public class DotParser { 
     private BufferedReader fileDot;        // Input Stream
     private List<String> inputSignalList;   // Input Signals as Strings of Chars
     private List<String> outputSignalList;  // Output Signals as Strings of Chars
