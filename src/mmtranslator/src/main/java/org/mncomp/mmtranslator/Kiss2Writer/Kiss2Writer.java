@@ -100,7 +100,7 @@ public class Kiss2Writer {
                 e.printStackTrace();
             }
         }
-    }
+    } 
 
     // Method to close the Kiss2 file
     public void closeKiss2File() {
