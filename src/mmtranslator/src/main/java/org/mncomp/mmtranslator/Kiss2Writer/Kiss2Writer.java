@@ -1,5 +1,6 @@
-//
+// Package declaration for the Kiss2Writer class
 package org.mncomp.mmtranslator.Kiss2Writer;
+// Import statements for required classes
 import org.mncomp.mmtranslator.MM.MM;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
@@ -7,73 +8,109 @@ import org.mncomp.mmtranslator.Signal.Signal;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+// Class definition for the Kiss2Writer
 public class Kiss2Writer {
+    // BufferedWriter for writing to the Kiss2 file
     private BufferedWriter fileWriter;
-    private MM mealyMachine;
-   /* public Kiss2Writer(String filePath) {
-        try {
-            fileWriter = new BufferedWriter(new FileWriter(filePath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
-    public Kiss2Writer(String filePath, MM mealyMachine) {
-        try {
-            fileWriter = new BufferedWriter(new FileWriter(filePath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        this.mealyMachine = mealyMachine;
-    }
-    public void writeKiss2(MM mealyMachine) {
-        try {
-            fileWriter.write(".i " + mealyMachine.getInputSignals().size());
-            fileWriter.newLine();
-            fileWriter.write(".o " + mealyMachine.getOutputSignals().size());
-            fileWriter.newLine();
-            fileWriter.write(".s " + mealyMachine.getAllStates().size());
-            fileWriter.newLine();
-//            fileWriter.write(".r " + mealyMachine.getResetState().getStateName());
-            fileWriter.newLine();
-            fileWriter.write(".p " + mealyMachine.getAllTransitions().size());
-            fileWriter.newLine();
-            for (Signal signal : mealyMachine.getInputSignals()) {
-                fileWriter.write(".v " + signal.getSignalName());
-                fileWriter.newLine();
-            }
-            for (Signal signal : mealyMachine.getOutputSignals()) {
-                fileWriter.write(".v " + signal.getSignalName());
-                fileWriter.newLine();
-            }
-            System.out.println("Input Signals: " + mealyMachine.getInputSignals().size());
-            System.out.println("Output Signals: " + mealyMachine.getOutputSignals().size());
-            System.out.println("Number of States: " + mealyMachine.getAllStates().size());
-            System.out.println("Number of Transitions: " + mealyMachine.getAllTransitions().size());
 
-            // Write state definitions
-            for (State state : mealyMachine.getAllStates()) {
-                fileWriter.write(state.getStateName());
-                fileWriter.newLine();
-            }
-            // Write transitions
-            for (Transition transition : mealyMachine.getAllTransitions()) {
-                String input = String.join("", transition.getInputSignals().toString());
-                String output = String.join("", transition.getOutputSignals().toString());
-                String line = transition.getStateFrom().getStateName() + " " + input + " " + output + " " + transition.getStateTo().getStateName();
-                fileWriter.write(line);
-                fileWriter.newLine();
-            }
-            fileWriter.flush();
+    // Reference to the Mealy Machine
+    private MM mm;
+
+    // Constructor for Kiss2Writer class
+    public Kiss2Writer(String filePath, MM mm) {
+        try {
+            // Initialize the BufferedWriter with the specified file path
+            fileWriter = new BufferedWriter(new FileWriter(filePath));
         } catch (IOException e) {
+            // Handle IOException if file initialization fails
             e.printStackTrace();
         }
+        this.mm = mm; // Set the reference to the Mealy Machine
     }
+
+    // Method to write the Mealy Machine to a Kiss2 file
+    public void writeKiss2(MM mm) {
+        try {
+            // Check if the fileWriter is not null
+            if (fileWriter != null) {
+                // Write the number of input signals to the file
+                fileWriter.write(".i " + mm.getInputSignals().size());
+                fileWriter.newLine();
+
+                // Write the number of output signals to the file
+                fileWriter.write(".o " + mm.getOutputSignals().size());
+                fileWriter.newLine();
+
+                // Write the number of states to the file
+                fileWriter.write(".s " + mm.getAllStates().size());
+                fileWriter.newLine();
+
+                // Write the ID of the reset state to the file
+                fileWriter.write(".r " + mm.getResetState().getId());
+                fileWriter.newLine();
+
+                // Write the number of transitions to the file
+                fileWriter.write(".p " + mm.getAllTransitions().size());
+                fileWriter.newLine();
+
+                // Write the names of input signals to the file
+                for (Signal signal : mm.getInputSignals()) {
+                    fileWriter.write(".v " + signal.getSignalName());
+                    fileWriter.newLine();
+                }
+
+                // Write the names of output signals to the file
+                for (Signal signal : mm.getOutputSignals()) {
+                    fileWriter.write(".v " + signal.getSignalName());
+                    fileWriter.newLine();
+                }
+
+                // Write state definitions to the file
+                for (State state : mm.getAllStates()) {
+                    fileWriter.write(Integer.toString(state.getId()));
+                    fileWriter.newLine();
+                }
+
+                // Write transitions to the file
+                for (Transition transition : mm.getAllTransitions()) {
+                    String input = transition.getInputSignals().getSignalName();
+                    String output = transition.getOutputSignals().getSignalName();
+                    String line = transition.getStateFrom().getId() + " " + input + " " + output + " " + transition.getStateTo().getId();
+                    fileWriter.write(line);
+                    fileWriter.newLine();
+                }
+
+                // Flush the BufferedWriter
+                fileWriter.flush();
+            }
+
+            // Close the BufferedWriter
+            fileWriter.close();
+        } catch (IOException e) {
+            // Handle IOException if an error occurs during writing
+            e.printStackTrace();
+        } finally {
+            try {
+                // Close the BufferedWriter in the finally block
+                if (fileWriter != null) {
+                    fileWriter.close();
+                }
+            } catch (IOException e) {
+                // Handle IOException if an error occurs during closing
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // Method to close the Kiss2 file
     public void closeKiss2File() {
         try {
+            // Close the BufferedWriter if it is not null
             if (fileWriter != null) {
                 fileWriter.close();
             }
         } catch (IOException e) {
+            // Handle IOException if an error occurs during closing
             e.printStackTrace();
         }
     }
