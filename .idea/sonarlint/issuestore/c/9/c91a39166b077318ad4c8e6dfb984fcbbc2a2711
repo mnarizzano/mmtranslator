@@ -1,0 +1,24 @@
+
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ê¶¬×8õâ±¾Á1
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¾¦—ôøÿÿÿÿ8÷â±¾Á1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìšÿ·øÿÿÿÿ8ûâ±¾Á1
+v
+java:S1450"YRemove the "resetState" field and declare it as a local variable in the relevant methods.(Ûï¶Š8œä±¾Á1
+]
+java:S1117*";Rename "fileDot" which hides the field declared at line 14.(àş˜ùÿÿÿÿÿ8£ä±¾Á1
+G	java:S106s"+Replace this use of System.out by a logger.(û­ä8°ä±¾Á1
+L	java:S106t"+Replace this use of System.out by a logger.(¼ìïéùÿÿÿÿ8±ä±¾Á1
+a
+java:S1117‚"CRename "inputSignalList" which hides the field declared at line 15.(¤±ñ–8µä±¾Á1
+g
+java:S1117ƒ"DRename "outputSignalList" which hides the field declared at line 16.(×û»§ÿÿÿÿÿ8µä±¾Á1
+M	java:S106©"+Replace this use of System.out by a logger.(“ÔÜ“ıÿÿÿÿ8½ä±¾Á1
+M	java:S106ª"+Replace this use of System.out by a logger.(›¯Şâøÿÿÿÿ8½ä±¾Á1
+P
+java:S1068"3Remove this unused "inputSignalList" private field.(Õ¹¡š8Âä±¾Á1
+V
+java:S1068"4Remove this unused "outputSignalList" private field.(ğÓ¸¾üÿÿÿÿ8Âä±¾Á1
+L
+java:S1068"*Remove this unused "states" private field.(Ñé³üÿÿÿÿ8Âä±¾Á1

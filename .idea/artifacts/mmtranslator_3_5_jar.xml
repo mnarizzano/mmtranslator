@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mmtranslator 3 5:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/mmtranslator_3_5_jar</output-path>
+    <root id="archive" name="mmtranslator 3 5.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

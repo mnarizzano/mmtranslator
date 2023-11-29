@@ -1,0 +1,12 @@
+
+è
+java:S1598"ÌThis file "Kiss2Writer.java" should be located in "org/mncomp/mmtranslator/Kiss2Writer" directory, not in "/Users/fateme/Downloads/mmtranslator 3 5/src/mmtranslator/src/main/java/org/mncomp/mmtranslator".(¸‡²Œúÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸‡²Œúÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ˆÃ³í
+Q	java:S125$"<This block of commented-out lines of code should be removed.(‹œ²–
+E	java:S1060"+Replace this use of System.out by a logger.(äðìúÿÿÿÿ
+E	java:S1061"+Replace this use of System.out by a logger.(¸‹ßµûÿÿÿÿ
+E	java:S1062"+Replace this use of System.out by a logger.(ü÷Äþÿÿÿÿ
+E	java:S1063"+Replace this use of System.out by a logger.(è¢Ñ¹ûÿÿÿÿ
+F
+java:S1068"0Remove this unused "mealyMachine" private field.(äªÁá

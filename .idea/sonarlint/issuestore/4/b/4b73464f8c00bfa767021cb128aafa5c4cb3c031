@@ -1,0 +1,8 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸‡²Œúÿÿÿÿ
+j
+java:S2259X"HA "NullPointerException" could be thrown; "fileWriter" is nullable here.(§¾áïûÿÿÿÿ8˜ÊË¾Á1
+T
+java:S2589_"7Remove this expression which always evaluates to "true"(§Á›°8™ÊË¾Á1
+A
+java:S1068"&Remove this unused "mm" private field.(¥Ý±Òûÿÿÿÿ
