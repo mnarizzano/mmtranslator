@@ -31,7 +31,7 @@ public class Transition {
     // Output signal for the transition
     private Signal outputSignals;
 
-    **
+    /**
      * Default constructor to initialize the unique identifier for the transition.
      * It uses an atomic counter to ensure uniqueness across instances.
      */
@@ -39,7 +39,7 @@ public class Transition {
         id = count.incrementAndGet();
     }
 
-    **
+    /**
      * Parameterized constructor to create a transition with specified states, input, and output signals.
      * It also uses the default constructor to set the unique identifier.
      *
@@ -130,13 +130,3 @@ public class Transition {
     public void setInputSignals(Signal input) {
         inputSignals = input;
     }
-
-    /**
-     * Setter method to set the output signal for the transition.
-     * 
-     * @param output The output signal for the transition.
-     */
-    public void setOutputSignals(Signal output) {
-        outputSignals = output;
-    }
-}
