@@ -1,7 +1,7 @@
 /**
  * This file contains the definition of the Kiss2Writer class.
  *
- * @author mnarizzano
+ * @author RominaAdhami
  */
 package org.mncomp.mmtranslator.Kiss2Writer;
 
