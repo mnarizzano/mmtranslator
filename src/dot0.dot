@@ -1,9 +1,0 @@
-digraph MealyMachine {
-    1 [label="State1"];
-    2 [label="State2"];
-    3 [label="State3"];
-    1 -> 2 [label=inputA/outputX];
-    2 -> 3 [label=inputB/outputY];
-    3 -> 1 [label=inputC/outputZ];
-    {rank=same; 1;}
-}
