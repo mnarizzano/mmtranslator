@@ -6,7 +6,7 @@
 Make sure you have the following installed:
 
 - Java Development Kit (JDK)
-- JUnit for running tests 
+- Java Runtime Environment (JRE)
 
 ## Getting Started
 
