@@ -2,7 +2,7 @@
 
 This project aims to...
 
-## Prerequisites
+## Prerequisites 
 
 Make sure you have the following installed:
 
