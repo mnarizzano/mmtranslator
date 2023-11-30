@@ -31,6 +31,6 @@ Make sure you have the following installed:
     ```bash
        ./compile.sh
 
-6.Run the project using the JAR file that is generated.
+6. Run the project using the JAR file that is generated: 
     ```bash
     java -jar MMTranslator.jar
