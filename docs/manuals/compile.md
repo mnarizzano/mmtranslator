@@ -28,9 +28,9 @@ Make sure you have the following installed:
 ### Compile the Project
 
 5. Run the compile script to compile the source code and generate the necessary artifacts.
-  ```bash
-   ./compile.sh
+    ```bash
+       ./compile.sh
 
 6.Run the project using the JAR file that is generated.
-```bash
-java -jar MMTranslator.jar
+    ```bash
+    java -jar MMTranslator.jar
