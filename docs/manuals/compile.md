@@ -1,13 +1,12 @@
 # Mealy Machine Translator Project
 
-This project aims to...
 
 ## Prerequisites 
 
 Make sure you have the following installed:
 
 - Java Development Kit (JDK)
-- JUnit for running tests (Optional)
+- JUnit for running tests 
 
 ## Getting Started
 
