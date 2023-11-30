@@ -9,7 +9,7 @@ package org.mncomp.mmtranslator.Kiss2Writer;
 import org.mncomp.mmtranslator.MM.MM;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
-import org.mncomp.mmtranslator.Signal.Signal;
+import org.mncomp.mmtranslator.Signal.Signal; 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
