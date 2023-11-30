@@ -130,3 +130,13 @@ public class Transition {
     public void setInputSignals(Signal input) {
         inputSignals = input;
     }
+
+    /**
+     * Setter method to set the output signal for the transition.
+     * 
+     * @param output The output signal for the transition.
+     */
+    public void setOutputSignals(Signal output) {
+        outputSignals = output;
+    }
+}
