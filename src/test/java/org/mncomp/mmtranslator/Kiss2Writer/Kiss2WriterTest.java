@@ -6,7 +6,7 @@ import org.mncomp.mmtranslator.MM.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
+/** 
  * Unit tests for the Kiss2Writer class.
  */
 class Kiss2WriterTest {
