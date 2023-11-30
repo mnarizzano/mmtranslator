@@ -1,3 +1,8 @@
+/**
+ * This file contains the definition of the class DotParser.
+ *
+ * @author FatemeOzgoli
+ */
 package org.mncomp.mmtranslator.DotParser;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,36 +14,55 @@ import org.mncomp.mmtranslator.MM.MM;
 import org.mncomp.mmtranslator.Signal.Signal;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
-
+/**
+ * This class parses a Dot file representing a Mealy Machine and populates
+ * an MM (Mealy Machine) object.
+ */
 public class DotParser {
-    private BufferedReader fileDot;        // Input Stream
-    private List<String> inputSignalList;   // Input Signals as Strings of Chars
-    private List<String> outputSignalList;  // Output Signals as Strings of Chars
-    private MM mm;                          // Output MM
-    private Signal[] outputSignalsArray;    // Array to store output signals
-    private Signal[] inputSignalsArray;     // Array to store input signals
-    private List<State> states;             // List to store states
-    private State resetState = new State("reset", 0);  // Default reset state
+    // Input Stream for reading the Dot file
+    private BufferedReader fileDot;
+    // Lists to store input and output signals extracted from the Dot file
+    private List<String> inputSignalList;
+    private List<String> outputSignalList;
+    // Output MM (Mealy Machine)
+    private MM mm;
+    // Arrays to store input and output signals
+    private Signal[] outputSignalsArray;
+    private Signal[] inputSignalsArray;
+    // List to store states
+    private List<State> states;
+    // Default reset state
+    private State resetState = new State("reset", 0);
 
-    // Constructor to initialize the DotParser with a file path and an MM object
+    /**
+     * Constructor to initialize the DotParser with a file path and an MM object.
+     *
+     * @param filePath Path to the Dot file.
+     * @param mm       Mealy Machine object to populate.
+     */
     public DotParser(String filePath, MM mm) {
         try {
             // Initialize a BufferedReader to read from the Dot file using the provided file path
             fileDot = new BufferedReader(new FileReader(filePath));
 
             // Initialize lists to store input and output signals extracted from the Dot file
-            inputSignalList = new ArrayList<String>();
-            outputSignalList = new ArrayList<String>();
+            inputSignalList = new ArrayList<>();
+            outputSignalList = new ArrayList<>();
         } catch (IOException e) {
             // Print stack trace if an IOException occurs during file initialization
             e.printStackTrace();
         }
-        //making the mealymachine instance to do the process
+        // Set the Mealy Machine instance to process
         this.mm = mm;
     }
 
-    // Method to parse the Dot file and populate the MM object
-    public void parseDotFile(String filePath) throws IOException {
+    /**
+     * Method to parse the Dot file and populate the MM object.
+     *
+     * @param filePath Path to the Dot file.
+     * @throws IOException If an IO error occurs during file reading.
+     */
+   public void parseDotFile(String filePath) throws IOException {
         try (BufferedReader fileDot = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = fileDot.readLine()) != null) {
@@ -57,7 +81,12 @@ public class DotParser {
             }
         }
     }
-    // Method to detect and process state information from a line
+
+     /**
+     * Method to detect and process state information from a line.
+     *
+     * @param line Line containing state information.
+     */
     private void stateDetection(String line) {
         // Split the line at "[" to separate the state name from additional information
         String[] fullState = line.split("\\[");
@@ -75,7 +104,11 @@ public class DotParser {
         mm.addState(myState);
     }
 
-    // Method to set the reset state based on a line containing "rank"
+    /**
+     * Method to set the reset state based on a line containing "rank".
+     *
+     * @param line Line containing reset state information.
+     */
     private void resetState(String line) {
         // Extract the state number from the line using regular expression and parse it as an integer
         int toStateNumber = Integer.parseInt(line.replaceAll("\\D+", ""));
@@ -88,7 +121,11 @@ public class DotParser {
         mm.setResetState(resetState);
     }
 
-    // Method to process a transition line and add it to the Mealy machine
+    /**
+     * Method to process a transition line and add it to the Mealy machine.
+     *
+     * @param line Line containing transition information.
+     */
     private void processTransition(String line) {
         // Split the line into parts using the "->" separator
         String[] parts = line.split("->");
@@ -117,8 +154,11 @@ public class DotParser {
         }
     }
 
-
-    // Method to process signal labels from a line
+     /**
+     * Method to process signal labels from a line.
+     *
+     * @param line Line containing signal labels.
+     */
     private void processSignalLabels(String line) {
         // Extract the label part from the line
         String label = line.substring(line.indexOf("label") + 6).trim();
@@ -170,12 +210,19 @@ public class DotParser {
         System.out.println("Output Signals from Labels: " + Arrays.toString(outputSignalList.toArray()));
     }
 
-    // Getter method to retrieve the MM object
+      /**
+     * Getter method to retrieve the MM object.
+     *
+     * @return Mealy Machine object.
+     */
     public MM getMealyMachine() {
         return mm;
     }
 
-    // Method to close the Dot file
+    **
+     * Method to close the Dot file.
+     * Closes the FileInputStream used for reading the Dot file.
+     */
     public void closeDotFile() {
         try {
             if (fileDot != null) {
