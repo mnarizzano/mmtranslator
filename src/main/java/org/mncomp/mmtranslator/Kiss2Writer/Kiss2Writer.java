@@ -1,5 +1,10 @@
-// Package declaration for the Kiss2Writer class
+/**
+ * This file contains the definition of the Kiss2Writer class.
+ *
+ * @author mnarizzano
+ */
 package org.mncomp.mmtranslator.Kiss2Writer;
+
 // Import statements for required classes
 import org.mncomp.mmtranslator.MM.MM;
 import org.mncomp.mmtranslator.State.State;
@@ -8,7 +13,10 @@ import org.mncomp.mmtranslator.Signal.Signal;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-// Class definition for the Kiss2Writer
+
+/**
+ * The Kiss2Writer class is responsible for writing a Mealy Machine to a Kiss2 file.
+ */
 public class Kiss2Writer {
     // BufferedWriter for writing to the Kiss2 file
     private BufferedWriter fileWriter;
@@ -16,7 +24,12 @@ public class Kiss2Writer {
     // Reference to the Mealy Machine
     private MM mm;
 
-    // Constructor for Kiss2Writer class
+    /**
+     * Constructor for the Kiss2Writer class.
+     *
+     * @param filePath Path to the Kiss2 file.
+     * @param mm       Mealy Machine object to be written.
+     */
     public Kiss2Writer(String filePath, MM mm) {
         try {
             // Initialize the BufferedWriter with the specified file path
@@ -28,7 +41,13 @@ public class Kiss2Writer {
         this.mm = mm; // Set the reference to the Mealy Machine
     }
 
-    // Method to write the Mealy Machine to a Kiss2 file
+
+
+    /**
+     * Method to write the Mealy Machine to a Kiss2 file.
+     *
+     * @param mm Mealy Machine object to be written.
+     */
     public void writeKiss2(MM mm) {
         try {
             // Check if the fileWriter is not null
@@ -102,7 +121,11 @@ public class Kiss2Writer {
         }
     }
 
-    // Method to close the Kiss2 file
+    
+    /**
+     * Method to close the Kiss2 file.
+     * Closes the BufferedWriter used for writing to the Kiss2 file.
+     */
     public void closeKiss2File() {
         try {
             // Close the BufferedWriter if it is not null
