@@ -1,4 +1,4 @@
-# Mealy Machine Translator Project
+# Mealy Machine Translator Project 
 
 
 ## Prerequisites 
