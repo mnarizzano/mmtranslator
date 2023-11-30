@@ -220,7 +220,7 @@ public class DotParser {
         return mm;
     }
 
-    **
+    /**
      * Method to close the Dot file.
      * Closes the FileInputStream used for reading the Dot file.
      */
