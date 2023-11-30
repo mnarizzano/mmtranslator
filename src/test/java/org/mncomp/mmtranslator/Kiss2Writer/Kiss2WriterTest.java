@@ -1,40 +1,51 @@
+// Package declaration for the test class
 package org.mncomp.mmtranslator.Kiss2Writer;
+
+// Import statements for required classes and methods
 import org.mncomp.mmtranslator.MM.*;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the Kiss2Writer class.
+ */
 class Kiss2WriterTest {
 
+    /**
+     * Test the writeKiss2 method of the Kiss2Writer class.
+     */
     @Test
     void writeKiss2() {
-        // Create an instance of MM (Mealy Machine) for testing
+        // Arrange: Create an instance of MM (Mealy Machine) for testing
         // You may need to adjust this based on the actual MM class structure
         MM mm = new MM();
 
-        // Create an instance of Kiss2Writer with a file path and the MM instance
+        // Arrange: Create an instance of Kiss2Writer with a file path and the MM instance
         Kiss2Writer kiss2Writer = new Kiss2Writer("test.kiss2", mm);
 
-        // Call the writeKiss2 method
+        // Act: Call the writeKiss2 method
         kiss2Writer.writeKiss2(mm);
 
-        // Add assertions to check the expected behavior
+        // Assert: Add assertions to check the expected behavior
 
-        // Close the Kiss2 file
+        // Arrange: Close the Kiss2 file
         kiss2Writer.closeKiss2File();
     }
 
+    /**
+     * Test the closeKiss2File method of the Kiss2Writer class.
+     */
     @Test
     void closeKiss2File() {
-        // Create an instance of MM (Mealy Machine) for testing
+        // Arrange: Create an instance of MM (Mealy Machine) for testing
         MM mm = new MM();
 
-        // Create an instance of Kiss2Writer with a file path and the MM instance
+        // Arrange: Create an instance of Kiss2Writer with a file path and the MM instance
         Kiss2Writer kiss2Writer = new Kiss2Writer("test.kiss2", mm);
 
-        // Call the closeKiss2File method
+        // Act: Call the closeKiss2File method
         kiss2Writer.closeKiss2File();
 
-        // Add assertions to check the expected behavior
+        // Assert: Add assertions to check the expected behavior
     }
 }
