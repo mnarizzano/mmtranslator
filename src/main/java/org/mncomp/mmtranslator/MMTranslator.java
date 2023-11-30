@@ -1,4 +1,4 @@
-**
+/**
  * This file contains the definition of the MMTranslator class.
  * The MMTranslator class is the entry point for the Mealy Machine translation process.
  * It creates instances of the Mealy Machine, DotParser, and Kiss2Writer to parse Dot files
