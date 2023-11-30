@@ -1,4 +1,4 @@
-/ Dot code for a simple Mealy Machine
+// Dot code for a simple Mealy Machine
 
 // Declare a directed graph named "MealyMachine"
 digraph MealyMachine {
