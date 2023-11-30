@@ -12,10 +12,10 @@ Make sure you have the following installed:
 
 1. Clone the Project
     ```bash
-     git clone https://github.com/mnarizzano/mmtranslator.git
+     git clone https://github.com/mnarizzano/mmtranslator/tree/main.git
 
 
-3. Navigate to the project directory:
+3. Navigate to the root directory of where you cloned the project :
     ```bash
      cd mmtranslator
 
