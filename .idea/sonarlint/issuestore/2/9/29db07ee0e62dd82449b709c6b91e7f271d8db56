@@ -1,6 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ø§øÿÿÿÿ
-j
-java:S1128"HRemove this unused import 'org.mncomp.mmtranslator.DotParser.DotParser'.(°û›ûÿÿÿÿ8éƒ§¾Á1
-R
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ëƒ§¾Á1
