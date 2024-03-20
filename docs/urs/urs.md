@@ -119,13 +119,11 @@ The project objective is to provide a tool that allows MNcomp employees to creat
 
 | ID | Description | Priority |
 | --------------- | ----------- | ---------- | 
-
 | 1.0 |  The system should take as input a valid path to a to a file where a MM is stored in dot format | |
 | 1.1 |  The system should take as input a valid path to a to a file where a MM is stored in kiss2 format | |
 | 1.2 |  The system should take as input a list of names representing the input signals of the MM | |
 | 1.3 |  The system should take as input a list of names representing the output signals of the MM| |
 | 1.4 |  The system should take as input a valid path to a to a file where the translation should be written | |
-
 | 2.0 |  The output signals should have an unique name with respect to all signals (input and output)| |
 | 2.1 |  The input signals should have an unique name with respect to all signals (input and output)| |
 | 3.0 |  The system should allow the user to choose beetween tanslation from dot to kiss2 or from kiss2 to dot format| |
