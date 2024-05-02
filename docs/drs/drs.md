@@ -186,7 +186,7 @@ specifications    </p>
     <summary> This section describes the class diagram of the system.
     </summary>
     
-![Class Diagram](imgs/class.jpg)
+![Class Diagram](imgs/class2.jpg)
 
 </details>
 
