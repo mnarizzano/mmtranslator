@@ -186,7 +186,7 @@ specifications    </p>
     <summary> This section describes the class diagram of the system.
     </summary>
     
-![Class Diagram]((https://github.com/mnarizzano/mmtranslator/blob/SE_Project_RF/docs/drs/imgs/UML.jpg))
+![Class Diagram](imgs/class.jpg)
 
 </details>
 
@@ -220,7 +220,7 @@ Dependencies:
     </summary>
     <p>This sub section should describe ...</p>
     
-![Object Diagram]((https://github.com/mnarizzano/mmtranslator/blob/SE_Project_RF/docs/drs/imgs/Object.jpg))
+![Object Diagram](imgs/Object.jpg)
 
 </details>
 
