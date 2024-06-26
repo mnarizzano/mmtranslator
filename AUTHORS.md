@@ -1,5 +1,8 @@
 Claudio Giampaolo (kla1997@live.com)
 
 
-Massimo Narizzano (massimo.narizzano@unige.it
+Massimo Narizzano (massimo.narizzano@unige.it)
+
+
+Fatemeh Ozgoli (fatemeozgoli@gmail.com)
 
