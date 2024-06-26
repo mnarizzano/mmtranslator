@@ -1,0 +1,6 @@
+.i 1
+.o 1
+.s 2
+.r State1
+.p 1
+State1 inputA State2 outputX;
