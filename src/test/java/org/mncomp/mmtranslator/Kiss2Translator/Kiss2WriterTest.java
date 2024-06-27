@@ -2,73 +2,54 @@ package org.mncomp.mmtranslator.Kiss2Translator;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.junit.jupiter.api.io.TempDir;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Kiss2WriterTest {
+class Kiss2WriterTest {
 
     private Kiss2Writer kiss2Writer;
+    private HashMap<String, State> states;
+    private HashMap<Integer, Transition> transitions;
 
-    @Mock
-    private BufferedWriter mockBufferedWriter;
+    @TempDir
+    Path tempDir;
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
         kiss2Writer = new Kiss2Writer();
+        states = new HashMap<>();
+        transitions = new HashMap<>();
     }
 
     @Test
     void testWriteKissFile() throws IOException {
-        String filePath = "test.kiss2";
-        HashMap<String, State> states = new HashMap<>();
+        // Arrange
         State state1 = new State("State1", 1);
+        state1.setInit();
+        states.put(state1.getStateName(), state1);
+
         State state2 = new State("State2", 2);
-        state1.setInit(); // Set State1 as initial state
-        states.put("State1", state1);
-        states.put("State2", state2);
+        states.put(state2.getStateName(), state2);
 
-        HashMap<Integer, Transition> transitions = new HashMap<>();
-        Transition transition1 = new Transition(1, state1, state2, "input1", "output1");
-        Transition transition2 = new Transition(2, state2, state1, "input2", "output2");
-        transitions.put(1, transition1);
-        transitions.put(2, transition2);
+        Transition transition = new Transition(1, state1, state2, "0", "1");
+        transitions.put(transition.getId(), transition);
 
-        // Mock FileWriter and BufferedWriter
-        FileWriter mockFileWriter = mock(FileWriter.class);
-        when(mockFileWriter.getBufferedWriter()).thenReturn(mockBufferedWriter);
-        whenNew(FileWriter.class).withArguments(filePath).thenReturn(mockFileWriter);
+        Path kissFile = tempDir.resolve("output.kiss2");
 
-        kiss2Writer.writeKissFile(filePath, states, transitions);
+        // Act
+        kiss2Writer.writeKissFile(kissFile.toString(), states, transitions);
 
-        // Verify header information
-        verify(mockBufferedWriter).write(".i 1");
-        verify(mockBufferedWriter).newLine();
-        verify(mockBufferedWriter).write(".o 1");
-        verify(mockBufferedWriter).newLine();
-        verify(mockBufferedWriter).write(".s 2"); // Two states in the HashMap
-        verify(mockBufferedWriter).newLine();
-        verify(mockBufferedWriter).write(".r State1"); // Initial state is State1
-        verify(mockBufferedWriter).newLine();
-        verify(mockBufferedWriter).write(".p 2"); // Two transitions in the HashMap
-        verify(mockBufferedWriter, times(2)).newLine();
-
-        // Verify transitions
-        verify(mockBufferedWriter).write("State1 input1 State2 output1");
-        verify(mockBufferedWriter).newLine();
-        verify(mockBufferedWriter).write("State2 input2 State1 output2");
-        verify(mockBufferedWriter).newLine();
-
-        // Close resources
-        verify(mockBufferedWriter).close();
+        // Assert
+        String expectedContent = ".i 1\n.o 1\n.s 2\n.r State1\n.p 1\nState1 0 State2 1\n";
+        String actualContent = Files.readString(kissFile);
+        assertEquals(expectedContent, actualContent);
     }
 }
