@@ -13,6 +13,9 @@ import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Unit tests for the Kiss2Writer class.
+ */
 class Kiss2WriterTest {
 
     private Kiss2Writer kiss2Writer;
@@ -22,6 +25,9 @@ class Kiss2WriterTest {
     @TempDir
     Path tempDir;
 
+    /**
+     * Sets up the test environment before each test.
+     */
     @BeforeEach
     void setUp() {
         kiss2Writer = new Kiss2Writer();
@@ -29,6 +35,9 @@ class Kiss2WriterTest {
         transitions = new HashMap<>();
     }
 
+    /**
+     * Tests the writeKissFile method.
+     */
     @Test
     void testWriteKissFile() throws IOException {
         // Arrange
