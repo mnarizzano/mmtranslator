@@ -11,9 +11,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the DotParser class.
+ */
 class DotParserTest {
 
     private DotParser dotParser;
@@ -21,11 +23,17 @@ class DotParserTest {
     @TempDir
     Path tempDir;
 
+    /**
+     * Sets up the test environment before each test.
+     */
     @BeforeEach
     void setUp() {
         dotParser = new DotParser();
     }
 
+    /**
+     * Tests the parse method with a single transition.
+     */
     @Test
     void testParse() throws IOException {
         // Arrange
@@ -57,6 +65,9 @@ class DotParserTest {
         assertEquals(state2, transition.getToState());
     }
 
+    /**
+     * Tests the parse method with multiple transitions.
+     */
     @Test
     void testParseWithMultipleTransitions() throws IOException {
         // Arrange
