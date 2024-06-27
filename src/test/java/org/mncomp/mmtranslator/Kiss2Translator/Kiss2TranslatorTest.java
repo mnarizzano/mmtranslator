@@ -12,9 +12,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the Kiss2Translator class.
+ */
 class Kiss2TranslatorTest {
 
     private Kiss2Translator kiss2Translator;
@@ -23,12 +25,18 @@ class Kiss2TranslatorTest {
     @TempDir
     Path tempDir;
 
+    /**
+     * Sets up the test environment before each test.
+     */
     @BeforeEach
     void setUp() {
         dotParser = new DotParser();
         kiss2Translator = new Kiss2Translator(dotParser, new Kiss2Writer());
     }
 
+    /**
+     * Tests the parseDotFile method.
+     */
     @Test
     void testParseDotFile() throws IOException {
         // Arrange
@@ -60,6 +68,9 @@ class Kiss2TranslatorTest {
         assertEquals(state2, transition.getToState());
     }
 
+    /**
+     * Tests the writeKissFile method.
+     */
     @Test
     void testWriteKissFile() throws IOException {
         // Arrange
