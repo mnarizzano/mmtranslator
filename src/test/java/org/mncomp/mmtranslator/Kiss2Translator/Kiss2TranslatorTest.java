@@ -2,65 +2,89 @@ package org.mncomp.mmtranslator.Kiss2Translator;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.junit.jupiter.api.io.TempDir;
 import org.mncomp.mmtranslator.DotParser.DotParser;
 import org.mncomp.mmtranslator.State.State;
 import org.mncomp.mmtranslator.Transition.Transition;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class Kiss2TranslatorTest {
 
-    @Mock
-    private DotParser dotParserMock;
-
-    @Mock
-    private Kiss2Writer kiss2WriterMock;
-
     private Kiss2Translator kiss2Translator;
+    private DotParser dotParser;
+
+    @TempDir
+    Path tempDir;
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this); // Initialize mocks
-
-        // Stubbing mock behavior if needed
-        // Example: when(dotParserMock.parse(anyString(), any(), any())).thenReturn(/* mock return value */);
-        // Example: doNothing().when(kiss2WriterMock).writeKissFile(anyString(), any(), any());
-
-        kiss2Translator = new Kiss2Translator(dotParserMock, kiss2WriterMock);
+        dotParser = new DotParser();
+        kiss2Translator = new Kiss2Translator(dotParser, new Kiss2Writer());
     }
 
     @Test
     void testParseDotFile() throws IOException {
-        // Example test using mocked objects
+        // Arrange
+        String inputFilePath = "test.dot";
         HashMap<String, State> states = new HashMap<>();
         HashMap<Integer, Transition> transitions = new HashMap<>();
 
-        // Mock behavior setup if necessary
-        // Example: when(dotParserMock.parse(anyString(), any(), any())).thenCallRealMethod();
+        // Prepare the content of the dot file
+        String dotContent = "State1 -> State2 [label=\"0/1\"]\n";
+        Path dotFile = tempDir.resolve(inputFilePath);
+        Files.writeString(dotFile, dotContent);
 
-        kiss2Translator.parseDotFile("inputFilePath", states, transitions);
+        // Act
+        kiss2Translator.parseDotFile(dotFile.toString(), states, transitions);
 
-        // Add assertions based on expected behavior
+        // Assert
+        assertEquals(2, states.size());
+        assertEquals(1, transitions.size());
+
+        State state1 = states.get("State1");
+        State state2 = states.get("State2");
+        Transition transition = transitions.get(0);
+
+        assertEquals("State1", state1.getStateName());
+        assertEquals("State2", state2.getStateName());
+        assertEquals("0", transition.getInputSignal());
+        assertEquals("1", transition.getOutputSignal());
+        assertEquals(state1, transition.getFromState());
+        assertEquals(state2, transition.getToState());
     }
 
     @Test
     void testWriteKissFile() throws IOException {
-        // Example test using mocked objects
+        // Arrange
+        String outputFilePath = "output.kiss2";
         HashMap<String, State> states = new HashMap<>();
         HashMap<Integer, Transition> transitions = new HashMap<>();
 
-        // Mock behavior setup if necessary
-        // Example: doNothing().when(kiss2WriterMock).writeKissFile(anyString(), any(), any());
+        State state1 = new State("State1", 1);
+        state1.setInit();
+        states.put(state1.getStateName(), state1);
 
-        kiss2Translator.writeKissFile("outputFilePath", states, transitions);
+        State state2 = new State("State2", 2);
+        states.put(state2.getStateName(), state2);
 
-        // Add assertions based on expected behavior
+        Transition transition = new Transition(1, state1, state2, "0", "1");
+        transitions.put(transition.getId(), transition);
+
+        Path kissFile = tempDir.resolve(outputFilePath);
+
+        // Act
+        assertDoesNotThrow(() -> kiss2Translator.writeKissFile(kissFile.toString(), states, transitions));
+
+        // Assert
+        String expectedContent = ".i 1\n.o 1\n.s 2\n.r State1\n.p 1\nState1 0 State2 1\n";
+        String actualContent = Files.readString(kissFile);
+        assertEquals(expectedContent, actualContent);
     }
 }
