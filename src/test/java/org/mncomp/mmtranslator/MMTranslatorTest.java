@@ -12,6 +12,9 @@ import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the MMTranslator class.
+ */
 class MMTranslatorTest {
 
     private MMTranslator translator;
@@ -19,6 +22,9 @@ class MMTranslatorTest {
     private State state2;
     private Transition transition1;
 
+    /**
+     * Sets up the test environment before each test.
+     */
     @BeforeEach
     void setUp() {
         DotParser dotParser = new DotParser();
@@ -29,6 +35,9 @@ class MMTranslatorTest {
         transition1 = new Transition(1, state1, state2, "signal1", "signal2");
     }
 
+    /**
+     * Tests the translate method.
+     */
     @Test
     void testTranslate() {
         String inputFilePath = "/Users/fateme/Downloads/mmtranslator-main6/src/dot0.dot";
@@ -41,6 +50,9 @@ class MMTranslatorTest {
         }
     }
 
+    /**
+     * Tests the addState method.
+     */
     @Test
     void testAddState() {
         translator.addState(state1);
@@ -48,6 +60,9 @@ class MMTranslatorTest {
         assertEquals(state1, retrievedState);
     }
 
+    /**
+     * Tests the addTransition method.
+     */
     @Test
     void testAddTransition() {
         translator.addTransition(transition1);
@@ -55,6 +70,9 @@ class MMTranslatorTest {
         assertEquals(transition1, retrievedTransition);
     }
 
+    /**
+     * Tests the getState method.
+     */
     @Test
     void testGetState() {
         translator.addState(state1);
@@ -62,6 +80,9 @@ class MMTranslatorTest {
         assertEquals(state1, retrievedState);
     }
 
+    /**
+     * Tests the getTransition method.
+     */
     @Test
     void testGetTransition() {
         translator.addTransition(transition1);
@@ -69,10 +90,13 @@ class MMTranslatorTest {
         assertEquals(transition1, retrievedTransition);
     }
 
-    // Note: This test assumes dot0.dot and kiss0.kiss2 exist in src/test/resources
+    /**
+     * Tests the main method.
+     * Note: This test assumes dot0.dot and kiss0.kiss2 exist in src/test/resources
+     */
     @Test
     void testMain() {
-        String[] args = {"src/test/resources/dot0.dot", "src/test/resources/kiss0.kiss2"};
+        String[] args = {"/Users/fateme/Downloads/mmtranslator-main6/src/dot0.dot", "/Users/fateme/Downloads/mmtranslator-main6/src/kiss0.kiss2"};
         MMTranslator.main(args);
         // Optionally add assertions to verify console output if needed
     }
