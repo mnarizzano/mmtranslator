@@ -1,0 +1,13 @@
+// Dot code for a simple Mealy Machine
+
+// Declare a directed graph named "MealyMachine"
+digraph MealyMachine {
+
+    // Define states with labels
+    State1 [label="State1"];  // State named "State1"
+    State2 [label="State2"];  // State named "State2"
+
+    // Define a transition from State1 to State2 with a labeled edge
+    State1 -> State2 [label="inputA / outputX"];  // Transition: input "inputA" produces output "outputX"
+
+}
