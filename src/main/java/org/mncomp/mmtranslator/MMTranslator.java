@@ -105,8 +105,8 @@ public class MMTranslator {
             // Print usage instructions if arguments are not provided
             System.out.println("Usage: MMTranslator from dot to kiss2");
             // For testing purposes, use default file paths (change as needed)
-            inputFilePath = "/Users/fateme/Downloads/mmtranslator-main6/src/dot1.dot";
-            outputFilePath = "/Users/fateme/Downloads/mmtranslator-main6/src/kiss1.kiss2";
+            inputFilePath = "src/dot1.dot";
+            outputFilePath = "src/kiss1.kiss2";
         }
 
         // Create MMTranslator instance with default DotParser and Kiss2Writer
