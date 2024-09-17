@@ -1,9 +1,0 @@
-// Dot code for a simple Mealy Machine
-
-digraph MealyMachine {
-    // Define states with labels
-    State1 [label="State1"];
-    State2 [label="State2"];
-    State3 [label="State3"];
-
-    // Define transitions with labeled edges
