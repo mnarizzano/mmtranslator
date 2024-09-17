@@ -93,7 +93,7 @@ public class MMTranslator {
      *
      * @param args Command-line arguments containing input and output file paths.
      */
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         String inputFilePath;
         String outputFilePath;
 
